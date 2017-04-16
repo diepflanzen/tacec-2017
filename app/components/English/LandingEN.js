@@ -27,8 +27,8 @@ export default class LandingEN extends React.Component {
         <div className={styles.landingHero}>
           {
             viewPortWidth < 600 ?
-              (<a href="https://tang.regfox.com/tacec-tang-conference-wotd-2017" target="_blank"><img src={heroImgSmall} className={styles.landingHeroImg}/></a>) :
-              (<a href="https://tang.regfox.com/tacec-tang-conference-wotd-2017" target="_blank"><img src={heroImg} className={styles.landingHeroImg}/></a>)
+              (<a href="https://tang.regfox.com/tacec-tang-conference-wotd-2017" target="_blank"><img src={heroImgSmall} alt="TACEC 2017 main image" className={styles.landingHeroImg}/></a>) :
+              (<a href="https://tang.regfox.com/tacec-tang-conference-wotd-2017" target="_blank"><img src={heroImg} alt="TACEC 2017 main image" className={styles.landingHeroImg}/></a>)
           }
         </div>
         <Container className={styles.landingBody}>
@@ -96,19 +96,19 @@ export default class LandingEN extends React.Component {
       			<Col md="4">
       				<a href="https://www.facebook.com/TACEC.org/"
               		target="_blank">
-      					<img src={logo} className={styles.hostLogo} height="114px" />
+      					<img src={logo} className={styles.hostLogo} alt="TACEC Logo" height="114px" />
       				</a>
       			</Col>
       			<Col md="4">
       				<a href="http://tangeneration.org/"
               		target="_blank">
-      					<img src={tangLogo} className={styles.hostLogo} width="80%" />
+      					<img src={tangLogo} className={styles.hostLogo} alt="TANG Logo" width="80%" />
       				</a>
       			</Col>
             <Col md="4">
               <a href="https://www.facebook.com/overseastaiwanesefordemocracy"
                   target="_blank">
-                <img src={otdLogo} className={styles.hostLogo} width="100%" />
+                <img src={otdLogo} className={styles.hostLogo} alt="OTD Logo" width="100%" />
               </a>
             </Col>
       		</Row>

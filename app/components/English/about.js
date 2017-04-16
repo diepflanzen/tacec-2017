@@ -115,7 +115,7 @@ export default class LandingEN extends React.Component {
         </div>
         <Container className={styles.landingBody}>
         	<Row>
-            <img src={tab === 0 ? logo : (tab === 1 ? tangLogo : otdLogo)} className={styles.hostLogo} height="114px" />
+            <img src={tab === 0 ? logo : (tab === 1 ? tangLogo : otdLogo)} alt={tab === 0 ? 'TACEC Logo' : (tab === 1 ? 'TANG Logo' : 'OTD Logo')}  className={styles.hostLogo} height="114px" />
 	          {tab === 0 ? TACEC : (tab === 1 ? TANG : OTD)}
           </Row>
         </Container>
