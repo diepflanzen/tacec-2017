@@ -62,7 +62,7 @@ export default class ChPages extends React.Component {
                   <Button color="primary" className={styles.navButton}>APPLY</Button>
                 </a>
                 <Link className={styles.langLinkCh} to="/">中文</Link>
-                <span> | </span>
+                <span>|</span>
                 <Link className={styles.langLinkEn} to="/en">EN</Link>
               </Col>
             </Row>
@@ -82,10 +82,14 @@ export default class ChPages extends React.Component {
         <Appbar className={styles.footer}>
           <Container>
             <Row>
-              <Col md="9">
-                <img src={logo} className={styles.footerLogo}/>
+              <Col md="6">
+                {
+                  viewPortWidth < 600 ?
+                    (<img src={smallLogo} className={styles.footerLogo}/>) :
+                    (<img src={logo} className={styles.footerLogo}/>)
+                }
               </Col>
-              <Col md="3">
+              <Col md="6">
                 <div className={styles.footerDisclaimer}>
                   © 2017 TACEC.org. All Rights Reserved
                 </div>

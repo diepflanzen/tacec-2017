@@ -36,7 +36,18 @@ export default class StaffEN extends React.Component {
               </div>
               <div className={styles.staffCard}>
                 <h3 className={styles.contactHeading}> TACEC <span style={{fontSize: 18, float: 'right'}}>TAIWANESE AMERICAN CONFERENCE / EAST COAST </span></h3>
-    	          <p className={styles.bodyTextAbout}>
+                <p className={styles.bodyTextAbout}>
+                  <Col md="4">
+                    <span> Sue-Ching Lin </span>
+                  </Col>
+                  <Col md="4" md-offset="4">
+                    <img src={emailIcon} width={25} />
+                    <span className={styles.bodyTextAbout} style={{marginLeft: '2%'}}>
+                      sclintacec@gmail.com
+                    </span>
+                  </Col>
+                </p>
+                <p className={styles.bodyTextAbout} style={{paddingTop: 40}}>
                   <Col md="4">
                     <span> Minze Chien </span>
                   </Col>
@@ -72,12 +83,12 @@ export default class StaffEN extends React.Component {
                 <h3 className={styles.contactHeading}> OTD <span style={{fontSize: 18, float: 'right'}}>OVERSEAS TAIWANESE FOR DEMOCRACY </span></h3>
     	          <p className={styles.bodyTextAbout}>
                   <Col md="4">
-                    <span> Ting-An Lin </span>
+                    <span> Yu-Chien Tseng  </span>
                   </Col>
                   <Col md="4" md-offset="4">
                     <img src={emailIcon} width={25} />
                     <span className={styles.bodyTextAbout} style={{marginLeft: '2%'}}>
-                      isly17@gmail.com
+                      crossover317@gmail.com
                     </span>
                   </Col>
                 </p>

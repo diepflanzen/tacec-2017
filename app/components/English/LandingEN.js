@@ -27,8 +27,8 @@ export default class LandingEN extends React.Component {
         <div className={styles.landingHero}>
           {
             viewPortWidth < 600 ?
-              (<img src={heroImgSmall} className={styles.landingHeroImg}/>) :
-              (<img src={heroImg} className={styles.landingHeroImg}/>)
+              (<a href="https://tang.regfox.com/tacec-tang-conference-wotd-2017" target="_blank"><img src={heroImgSmall} className={styles.landingHeroImg}/></a>) :
+              (<a href="https://tang.regfox.com/tacec-tang-conference-wotd-2017" target="_blank"><img src={heroImg} className={styles.landingHeroImg}/></a>)
           }
         </div>
         <Container className={styles.landingBody}>
@@ -52,12 +52,17 @@ export default class LandingEN extends React.Component {
 	          </Col>
           </Row>
         </Container>
+        {viewPortWidth < 700 && (
+        <img
+          src={mapInfo}
+          width="100%"
+        />)}
         <div style={{height: 480, width: '100%'}}>
           <GoogleMapReact
              bootstrapURLKeys={{key: 'AIzaSyDeZuJsUlNfaMcKn0JBHDfMl2TzALkPwUk'}}
              defaultCenter={mapCenter}
              defaultZoom={10}
-             options={{zoomControl: false, scrollwheel: false, scaleControl: false}}
+             options={{zoomControl: false, scrollwheel: false, scaleControl: false, disableDoubleClickZoom: true}}
              disableDefaultUI={true}
            >
              <div
@@ -69,39 +74,41 @@ export default class LandingEN extends React.Component {
                  width={60}
                />
              </div>
-             <div
-               lat={40.2201578}
-               lng={-74.9695344}
-             >
-               <img
-                 src={mapInfo}
-               />
-             </div>
+             {viewPortWidth > 700 && (
+               <div
+                 lat={40.2201578}
+                 lng={-74.9695344}
+               >
+                 <img
+                   src={mapInfo}
+                 />
+               </div>
+             )}
            </GoogleMapReact>
          </div>
         <Container className={styles.landingBody}>
       		<Row>
       			<Col md="4" md-offset="4">
-      				<h3 className={styles.heading}> HOST </h3>
+      				<h3 className={styles.heading}> ORGANIZER </h3>
       			</Col>
           </Row>
           <Row>
       			<Col md="4">
-      				<a href="http://g0v.tw"
+      				<a href="https://www.facebook.com/TACEC.org/"
               		target="_blank">
       					<img src={logo} className={styles.hostLogo} height="114px" />
       				</a>
       			</Col>
       			<Col md="4">
-      				<a href="https://www.facebook.com/cafephiloatNY/"
+      				<a href="http://tangeneration.org/"
               		target="_blank">
-      					<img src={tangLogo} className={styles.hostLogo} height="114px" />
+      					<img src={tangLogo} className={styles.hostLogo} width="80%" />
       				</a>
       			</Col>
             <Col md="4">
-              <a href="https://www.facebook.com/cafephiloatNY/"
+              <a href="https://www.facebook.com/overseastaiwanesefordemocracy"
                   target="_blank">
-                <img src={otdLogo} className={styles.hostLogo} height="114px" />
+                <img src={otdLogo} className={styles.hostLogo} width="100%" />
               </a>
             </Col>
       		</Row>

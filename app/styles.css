@@ -35,6 +35,10 @@ a:hover {
   color: #007e00;
 }
 
+li {
+  text-align: left;
+}
+
 
 /* App nav bar */
 
@@ -61,6 +65,7 @@ a:hover {
   margin: 0 20px;
   color: #444;
   padding-bottom: 22px;
+  font-family: 'DIN-Alternate';
 }
 
 .navLinkSelected {
@@ -93,6 +98,7 @@ a:hover {
   display: inline-block;
   line-height: 35px;
   color: #444;
+  font-family: 'DIN-Alternate';
 }
 
 .langLinkEn {
@@ -371,6 +377,15 @@ a:hover {
   margin-top: 50px;
   color: #999999;
   font-size: 12px;
+  float:right;
+}
+
+@media (max-width: 780px) {
+  .footerDisclaimer {
+    margin-top: 0px;
+    float:left;
+    margin-bottom: 50px;
+  }
 }
 
 .footerLogo {
@@ -532,4 +547,45 @@ a:hover {
     margin-left: 0;
     margin-right: 10px;
   }
+}
+
+.tabBand {
+  width: 100%;
+  background-color: rgb(165, 206, 134);
+  height: 50px;
+  margin-top: -90px;
+  margin-bottom: 90px;
+  border: 1px solid #fff;
+  display: flex;
+}
+
+.tabCategoryLeft {
+  width: 145px;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  height: 100%;
+  margin-left: 18%;
+  font-family: 'DIN-Alternate';
+  color: #fff;
+  font-size: 17px;
+  text-align: center;
+  padding-top: 10px;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
+.tabCategory {
+  composes: tabCategoryLeft;
+  margin-left: 0;
+  border-left: 0;
+}
+
+.tabCategoryLeftActive {
+  composes: tabCategoryLeft;
+  background-color: rgb(65, 138, 107);
+}
+
+.tabCategoryActive {
+  composes: tabCategory;
+  background-color: rgb(65, 138, 107);
 }
