@@ -16,7 +16,7 @@ export default class StaffEN extends React.Component {
   render() {
     return (
       <div>
-        <div className={styles.aboutImgContainer}><img src={contactImg} className={styles.aboutImg}/></div>
+        <div className={styles.aboutImgContainer}><img src={contactImg} alt="Contact icon image" className={styles.aboutImg}/></div>
         <Container className={styles.landingBody}>
         	<Row>
 	          <Col md="10" md-offset="1">

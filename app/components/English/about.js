@@ -101,7 +101,7 @@ export default class LandingEN extends React.Component {
 
     return (
       <div>
-        <div className={styles.aboutImgContainer}><img src={aboutImg} className={styles.aboutImg}/></div>
+        <div className={styles.aboutImgContainer}><img src={aboutImg} alt="About icon image" className={styles.aboutImg}/></div>
         <div className={styles.tabBand}>
           <div className={tab === 0 ? styles.tabCategoryLeftActive : styles.tabCategoryLeft} onClick={() => this.tabClick(0)}>
             TAC-EC

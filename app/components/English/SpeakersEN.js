@@ -15,7 +15,7 @@ export default class SpeakerEN extends React.Component {
   render() {
     return (
       <div>
-        <div className={styles.aboutImgContainer}><img src={speakerImg} className={styles.aboutImg}/></div>
+        <div className={styles.aboutImgContainer}><img src={speakerImg} alt="Speaker icon image" className={styles.aboutImg}/></div>
         <Container className={styles.landingBody}>
         	<Row>
 	          <Col md="10" md-offset="1">

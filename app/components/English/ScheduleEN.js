@@ -211,7 +211,7 @@ export default class ScheduleEN extends React.Component {
     )
     return (
       <div>
-        <div className={styles.aboutImgContainer}><img src={programImg} className={styles.aboutImg}/></div>
+        <div className={styles.aboutImgContainer}><img src={programImg} alt="Program icon image" className={styles.aboutImg}/></div>
         <div className={styles.tabBand}>
           <div className={tab === 0 ? styles.tabCategoryLeftActive : styles.tabCategoryLeft} onClick={() => this.tabClick(0)}>
             JULY 1, SAT
