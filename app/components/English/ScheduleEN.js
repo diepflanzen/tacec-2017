@@ -127,10 +127,6 @@ export default class ScheduleEN extends React.Component {
           <div className={styles.scheduleItemActivity}>主日禮拜 </div>
         </div>
         <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>08:30 - 09:00</div>
-          <div className={styles.scheduleItemActivity}>Openning </div>
-        </div>
-        <div className={styles.scheduleItem}>
           <div className={styles.scheduleItemTime}>09:00 - 09:45 </div>
           <div className={styles.scheduleItemActivity}>Keynote 5 </div>
         </div>
@@ -190,10 +186,6 @@ export default class ScheduleEN extends React.Component {
         <div className={styles.scheduleItem}>
           <div className={styles.scheduleItemTime}>07:30 - 08:30</div>
           <div className={styles.scheduleItemActivity}>主日禮拜 </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>08:30 - 09:00</div>
-          <div className={styles.scheduleItemActivity}>Openning </div>
         </div>
         <div className={styles.scheduleItem}>
           <div className={styles.scheduleItemTime}>09:00 - 09:45 </div>

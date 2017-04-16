@@ -21,20 +21,6 @@ export default class StaffEN extends React.Component {
         	<Row>
 	          <Col md="10" md-offset="1">
               <div className={styles.staffCard}>
-                <h3 className={styles.contactHeading}> REGISTRATION </h3>
-    	          <p className={styles.bodyTextAbout}>
-                  <Col md="4">
-                    <span> Sue-Ching Lin </span>
-                  </Col>
-                  <Col md="4" md-offset="4">
-                    <img src={emailIcon} width={25} />
-                    <span className={styles.bodyTextAbout} style={{marginLeft: '2%'}}>
-                      sclintacec@gmail.com
-                    </span>
-                  </Col>
-                </p>
-              </div>
-              <div className={styles.staffCard}>
                 <h3 className={styles.contactHeading}> TACEC <span style={{fontSize: 18, float: 'right'}}>TAIWANESE AMERICAN CONFERENCE / EAST COAST </span></h3>
                 <p className={styles.bodyTextAbout}>
                   <Col md="4">

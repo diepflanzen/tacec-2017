@@ -89,7 +89,7 @@ export default class LandingEN extends React.Component {
         <Container className={styles.landingBody}>
       		<Row>
       			<Col md="4" md-offset="4">
-      				<h3 className={styles.heading}> ORGANIZER </h3>
+      				<h3 className={styles.heading}> ORGANIZERS </h3>
       			</Col>
           </Row>
           <Row>

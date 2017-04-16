@@ -589,3 +589,9 @@ li {
   composes: tabCategory;
   background-color: rgb(65, 138, 107);
 }
+
+@media (max-width: 800px) {
+  .tabCategoryLeft {
+    margin-left: 0;
+  }
+}
