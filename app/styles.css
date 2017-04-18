@@ -595,3 +595,21 @@ li {
     margin-left: 0;
   }
 }
+
+.panelDetails {
+  position: fixed;
+  width: 50%;
+  z-index: 100;
+  left: 50%;
+  box-shadow: -3px 4px 4px rgba(0,0,0,.2);
+  height: 100vh;
+  top: 0;
+  background-color: #fff;
+}
+
+.panelDetailContent {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  padding-top: 40px;
+}

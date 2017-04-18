@@ -228,6 +228,20 @@ export default class ScheduleEN extends React.Component {
         </div>
         <Container className={styles.landingBody}>
         	<Row>
+            {/*<div className={styles.panelDetails}>
+              <div className={styles.panelDetailContent}>
+                <small> July 2, Sunday 3:00 pm </small>
+                <h3 className={styles.heading}> Panel Discussion 1 </h3>
+                <div>
+                  <h4> Track 1: 公民社會如何回應在國際戰略與經貿佈局下的台美中關係？ </h4>
+                  <p> body text blah blah blah.... </p>
+                </div>
+                <div>
+                  <h4> Track 2: g0v模式作為一種新組織經營法，以及與美東社群過去成果？ </h4>
+                  <p> body text blah blah blah.... </p>
+                </div>
+              </div>
+            </div>*/}
 	          <Col md="10" md-offset="1">
               <div style={{height: 800}}>
     	          <p className={styles.bodyTextAbout}>
