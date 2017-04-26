@@ -87,9 +87,9 @@ export default class Landing extends React.Component {
       <Col md="10" md-offset="1">
         <h3 className={styles.heading}> PANEL DISCUSSION </h3>
         <div className={styles.headingBottom} />
-        {OTDProgramData.panelsByDate.map(panel =>
+        {OTDProgramData.panelsByDate.map((panel, index) =>
           [
-            <img src={panel.dateImageSource} />,
+            <img src={panel.dateImageSource} style={{marginTop: index === 1 ? 50 : 0}} />,
             panel.tracks.map(track =>
               <div>
                 <h3 className={styles.OTDProgramHeading}>
