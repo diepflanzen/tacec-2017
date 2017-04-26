@@ -6,7 +6,7 @@ import ScheduleEN from './components/English/ScheduleEN';
 import SpeakersEN from './components/English/SpeakersEN';
 import AboutEN from './components/English/about';
 import StaffEN from './components/English/StaffEN';
-import OTDSummit from './components/English/OTDSummit';
+import OTDSummitEN from './components/English/OTDSummitEN';
 import { Router, Route, IndexRoute, hashHistory, applyRouterMiddleware } from 'react-router';
 import { useScroll } from 'react-router-scroll';
 
@@ -20,7 +20,7 @@ class App extends React.Component {
           <Route path="/about" component={AboutEN} />
           <Route path="/schedule" component={ScheduleEN} />
           <Route path="/speakers" component={SpeakersEN} />
-          <Route path="/otd" component={OTDSummit} />
+          <Route path="/otd" component={OTDSummitEN} />
         </Route>
         <Route path="/en" component={EnPages}>
         	<IndexRoute component={LandingEN} />
