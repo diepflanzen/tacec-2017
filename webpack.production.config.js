@@ -23,5 +23,22 @@ module.exports = {
         query: { limit: 20000 }
 			}
 		]
-	}
+	},
+	plugins: [
+      // Order the modules and chunks by occurrence.
+      // This saves space, because often referenced modules
+      // and chunks get smaller ids.
+      new webpack.optimize.OccurenceOrderPlugin(),
+      new webpack.optimize.UglifyJsPlugin({
+        compressor: {
+          warnings: false
+        }
+      }),
+      // turn on for production builds
+      new webpack.DefinePlugin({
+			  'process.env': {
+			    NODE_ENV: JSON.stringify('production')
+			  }
+			})
+  ]
 }
