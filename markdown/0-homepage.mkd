@@ -1,15 +1,12 @@
-Theme
-=====
+# Theme
 「世代連結、台美一起」(Generations United, Taiwanese Americans Together.)
 
-英文
-====
+# English
 The Conference Theme of 2017 TACEC-TANG is “Generations United, Taiwanese Americans Together”. It emphasizes the importance of unifying different generations of Taiwanese and Taiwanese Americans to work together toward helping our motherland Taiwan. It also indicates the need for Taiwan and America to work together for a better world society, especially at 2017 when new administrations with new opportunity commenced in both countries.
 
 Moving along with our theme, our conference will be joined by g0v's East Coast Hackathon, an event where participants spend a few days working together to solve public issues; and the Overseas Taiwanese for Democracy, an organization that brings together 1st generation young professional Taiwanese who are passionate about Taiwan.
 
-國語文
-======
+# 中文
 今年（2017）美東夏令會主題是「世代連結、台美一起」(Generations United, Taiwanese Americans Together)，著重在連結各世代台美人，凝聚台美雙方的力量，用行動來幫助台灣。
 
 「世代連結」，是大手牽小手的牽成，是新手扶老手的傳承。－－看著新一代台美人的成長與茁壯，看著新生代年輕台美人對台灣關切與熱愛，我們希望將不同世代的經驗與力量連結起來，將台美人的力量延展於無限！
