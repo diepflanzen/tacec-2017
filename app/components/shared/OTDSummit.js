@@ -30,7 +30,7 @@ export default class Landing extends React.Component {
 
   handleProgramClick = (title) => {
     this.setState({
-      open: !this.state.open,
+      open: this.state.clickedTitle === title ? !this.state.open : true,
       clickedTitle: title
     });
   }

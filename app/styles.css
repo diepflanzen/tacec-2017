@@ -375,6 +375,27 @@ li {
   letter-spacing: 1px;
 }
 
+@media (max-width: 1025px) and (min-width: 600px) {
+  .homepageBox {
+    width: 195px;
+  }
+
+  .homepageBoxContainer {
+    margin-left: 10%;
+  }
+}
+
+@media (max-width: 520px) {
+  .homepageBox {
+    width: 260px;
+  }
+
+  .homepageBoxContainer {
+    display: block;
+    margin-left: 16%;
+  }
+}
+
 /* End Home Page Box */
 
 .bodyText {

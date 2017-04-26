@@ -22,7 +22,8 @@ import GoogleMapReact from 'google-map-react';
 export default class LandingEN extends React.Component {
   render() {
     const viewPortWidth = window.innerWidth;
-    const mapCenter = viewPortWidth < 600 ? [39.9518694, -75.602182] : [39.9662578,-75.1395344];
+    const isMobile = viewPortWidth < 600;
+    const mapCenter = isMobile ? [39.9518694, -75.602182] : [39.9662578,-75.1395344];
     return (
       <div>
         <div className={styles.landingHero}>
@@ -50,16 +51,16 @@ export default class LandingEN extends React.Component {
                 Nearby are shops and restaurants, as well as Longwood Gardens and the fames Ling of Prussia Mall. Keep an eye out for registration, which will open late March to April.
                 Get excited for July 4th weekend! We can't wait to see you all!
   	          </p>
-              <div className={styles.homepageBoxContainer}>
+              <div className={styles.homepageBoxContainer} style={isMobile ? {marginLeft: -10 + (viewPortWidth - 260) / 2} : {}}>
                 <Link to="/schedule">
-                  <div className={styles.homepageBox} style={{borderRight: 'none'}}>
+                  <div className={styles.homepageBox} style={isMobile ? {borderBottom: 'none'} : {borderRight: 'none'}}>
                     <h3 className={styles.hpBoxHeading}>TACEC <br/> PROGRAM</h3>
                     <p className={styles.hpViewMore}> view more </p>
                     <img src={dotImg} style={{marginTop: -33}}/>
                   </div>
                 </Link>
                 <a href='http://tangeneration.org/programs/' target='_blank'>
-                  <div className={styles.homepageBox} style={{borderRight: 'none'}}>
+                  <div className={styles.homepageBox} style={isMobile ? {borderBottom: 'none'} : {borderRight: 'none'}}>
                     <h3 className={styles.hpBoxHeading}>TANG CONFERENCE</h3>
                     <p className={styles.hpViewMore}> view more </p>
                     <img src={dotImg} style={{marginTop: -33}}/>
