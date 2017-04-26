@@ -28,7 +28,7 @@
 # Check-in Location
 
 West Chester University Brandywine Hall
-Brandywine Hall, S New St, West Chester, PA 19383
+* Brandywine Hall, S New St, West Chester, PA 19383
 
 ## Train Station
 
@@ -37,12 +37,14 @@ Philadelphia, PA - 30th Street Train Station
 - Method 1
     - Option 1: transfer train via
         * SEPTA’s Paoli/Thorndale Line
-        * 50 mins $5
-        * [timetable](http://www.septa.org/schedules/rail/pdf/tho.pdf)
+        * 50 mins
+        * $5
+        * [Timetable](http://www.septa.org/schedules/rail/pdf/tho.pdf)
     - Option 2: transfer train via
         * Amtrak’s Keystone Service
-        * 35 mins $9
-        * [timetable](https://www.amtrak.com/ccurl/906/479/Keystone-Service-Schedule-030617.pdf)
+        * 35 mins
+        * $9
+        * [Timetable](https://www.amtrak.com/ccurl/906/479/Keystone-Service-Schedule-030617.pdf)
     - Exton Train Station
     - Take Uber / local taxi to the check-in location
         * 15 mins
@@ -65,6 +67,6 @@ Philadelphia International Airport (PHL)
 
 ## Parking
 - (Recommended) Park at D Lot (no overnight parking) first, check in and take luggage to your room, and then move your car to M Lot.
-- [View Map](https://drive.google.com/open?id=1--ocbXfGiZbUDHXBOCa1TAvCi3A)
+- [View map](https://drive.google.com/open?id=1--ocbXfGiZbUDHXBOCa1TAvCi3A)
 
 More information about travel to West Chester Unversity, please click [here](https://www.wcupa.edu/_admissions/sch_adm/visitus.aspx).
