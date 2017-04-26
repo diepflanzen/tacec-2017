@@ -2,7 +2,6 @@
   "name": "tacec-tang-otd-2017",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --devtool eval --progress --color --hot --content-base build",
     "test": "echo \"Error: no test specified\" && exit 1",
