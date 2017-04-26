@@ -16,6 +16,7 @@ import heroImg from '../../images/hero_big.png';
 import heroImgSmall from '../../images/hero_small.png';
 import logoMarker from '../../images/map-07.png';
 import mapInfo from '../../images/map_info.png';
+import dotImg from '../../images/dot.png';
 import GoogleMapReact from 'google-map-react';
 
 export default class LandingEN extends React.Component {
@@ -49,6 +50,29 @@ export default class LandingEN extends React.Component {
                 Nearby are shops and restaurants, as well as Longwood Gardens and the fames Ling of Prussia Mall. Keep an eye out for registration, which will open late March to April.
                 Get excited for July 4th weekend! We can't wait to see you all!
   	          </p>
+              <div className={styles.homepageBoxContainer}>
+                <Link to="/schedule">
+                  <div className={styles.homepageBox} style={{borderRight: 'none'}}>
+                    <h3 className={styles.hpBoxHeading}>TACEC <br/> PROGRAM</h3>
+                    <p className={styles.hpViewMore}> view more </p>
+                    <img src={dotImg} style={{marginTop: -33}}/>
+                  </div>
+                </Link>
+                <a href='http://tangeneration.org/programs/' target='_blank'>
+                  <div className={styles.homepageBox} style={{borderRight: 'none'}}>
+                    <h3 className={styles.hpBoxHeading}>TANG CONFERENCE</h3>
+                    <p className={styles.hpViewMore}> view more </p>
+                    <img src={dotImg} style={{marginTop: -33}}/>
+                  </div>
+                </a>
+                <Link to="/otd">
+                  <div className={styles.homepageBox}>
+                    <h3 className={styles.hpBoxHeading}>OTD <br /> SUMMIT</h3>
+                    <p className={styles.hpViewMore}> view more </p>
+                    <img src={dotImg} style={{marginTop: -33}}/>
+                  </div>
+                </Link>
+              </div>
 	          </Col>
           </Row>
         </Container>

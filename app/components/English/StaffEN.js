@@ -96,7 +96,7 @@ export default class StaffEN extends React.Component {
         <div style={{height: 150, width: '100%', backgroundColor: '#64a680'}}>
           <a href="https://tang.regfox.com/tacec-tang-conference-wotd-2017"
             target="_blank">
-            <Button color="primary" className={styles.applyNowButton}>Apply Now</Button>
+            <Button color="primary" className={styles.applyNowButton}>Register Now</Button>
           </a>
         </div>
       </div>

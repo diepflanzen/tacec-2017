@@ -245,6 +245,138 @@ li {
   margin-bottom: 40px;
 }
 
+/* OTD Program */
+
+.OTDProgramHeading {
+  composes: contactHeading;
+  color: #333;
+  border-bottom: 3px solid #17906a;
+  font-size: 17px;
+  letter-spacing: 5px;
+  font-weight: bolder;
+  margin-bottom: 0;
+}
+
+.OTDProgramSubHeading {
+  font-size: 12px;
+  margin-left: 20px;
+  letter-spacing: 1px;
+  font-family: 'Open Sans',sans-serif;
+  font-weight: lighter;
+}
+
+.OTDProgramBody {
+  height: 66px;
+  border-bottom: 1px solid rgba(0,0,0,.12);
+  padding-top: 2%;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.OTDProgramSpeakers {
+  float: right;
+}
+
+.OTDPlusSign {
+  width: 16px;
+  height: 16px;
+  margin-top: 5px;
+  margin-right: 17px;
+}
+
+.OTDProgramDesc {
+  color: #64a680;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.OTDProgramDetails {
+  background-color: rgb(234, 235, 236);
+  overflow: hidden;
+  width: 100%
+}
+
+.OTDButton {
+  width: 200px;
+  height: 40px;
+  font-size: 18px;
+  border-width: 3px;
+  line-height: initial;
+  letter-spacing: 3px;
+}
+
+.otdImg {
+  composes: aboutImg;
+  margin-left: 7%;
+}
+
+@media (max-width: 520px) {
+  .otdImg {
+    margin-left: -30%;
+    width: 150%;
+    height: auto;
+  }
+
+  .OTDProgramBody {
+    height: 115px;
+  }
+
+  .OTDProgramSpeakers {
+    float: none;
+  }
+
+  .OTDProgramDetails {
+    overflow: scroll;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 520px) {
+  .otdImg {
+    margin-left: -30%;
+    width: 150%;
+    height: auto;
+  }
+
+  .OTDProgramBody {
+    height: 75px;
+  }
+
+  .OTDProgramDetails {
+    overflow: scroll;
+  }
+}
+
+/* End OTD Program */
+
+/* Home Page Host Box */
+.homepageBox {
+  border: 3px solid #64a680;
+  height: 170px;
+  width: 260px;
+  padding: 30px;
+}
+
+.homepageBoxContainer {
+  display: flex;
+  margin-left: 10%;
+  margin-top: 70px;
+}
+
+.hpBoxHeading {
+  composes: heading;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.hpViewMore {
+  font-size: 14px;
+  font-family: 'DIN-Alternate';
+  color: #9bd07c;
+  letter-spacing: 1px;
+}
+
+/* End Home Page Box */
+
 .bodyText {
   color: #444;
   font-size: 16px;
@@ -271,6 +403,12 @@ li {
 .bodyTextWhite {
   composes: bodyText;
   color: white;
+}
+
+.bodyTextOTD {
+  composes: bodyTextAbout;
+  text-align: center;
+  letter-spacing: 1px;
 }
 
 .eventInfo {
