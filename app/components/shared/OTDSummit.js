@@ -47,7 +47,7 @@ export default class LandingEN extends React.Component {
          <p className={styles.bodyTextOTD}>
           2017海台青年會結合NGO和g0v黑客松，聚焦在全球化及台美中特殊國際政治下，台灣人在海外所能發揮的影響力。 <br />我們希望利用地利之便，一方面幫助台灣對外抗衡全球化浪潮和區域政治角力，一方面加速台灣內部轉型正義和社會改革的腳步！
          </p>
-        <h3 className={styles.heading}> OTD HACKATHON </h3>
+        <h3 className={styles.heading}> G0V HACKATHON </h3>
         <div className={styles.headingBottom} />
         <p className={styles.bodyTextOTD}>
          36 小時熱血衝刺，規劃行動方案、開發資訊與資料工具、認識十八般武藝的朋友！
