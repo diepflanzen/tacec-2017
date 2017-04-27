@@ -114,7 +114,7 @@ const AboutData = Object.freeze({
         en: "OTD",
         zh: "OTD",
       },
-      logoImageSource: tangLogo,
+      logoImageSource: otdLogo,
       logoImageAlternativeText: {
         en: "OTD Logo",
         zh: "OTD 標誌",
