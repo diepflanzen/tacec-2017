@@ -23,7 +23,7 @@ import { toAbsPath } from '../utils'
 
 export default class Landing extends React.Component {
   render() {
-    const { lang: langPath } = this.props;
+    const langPath = this.props.lang;
     const lang = langPath ? langPath : "en";
     const viewPortWidth = window.innerWidth;
     const isMobile = viewPortWidth < 600;
