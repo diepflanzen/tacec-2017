@@ -90,6 +90,41 @@ export default class StaffEN extends React.Component {
                   </Col>
                 </p>
               </div>
+              <div>
+                <h3 className={styles.contactHeading}> LOCAL TAXI </h3>
+                <p className={styles.bodyTextAbout}>
+                  <Col md="4">
+                    <span> Rainbow Cab Services  </span>
+                  </Col>
+                  <Col md="4" md-offset="4">
+                    <img src={phoneIcon} width={25} />
+                    <span className={styles.bodyTextAbout} style={{marginLeft: '2%'}}>
+                      (610)696-6060
+                    </span>
+                  </Col>
+                </p>
+                <h3 className={styles.contactHeading}> AIRPORT </h3>
+                <p className={styles.bodyTextAbout}>
+                  <Col md="12">
+                    <span> Philadelphia International Airport  </span>
+                  </Col>
+                  <p> Take Uber or local taxi to the check-in location </p>
+                </p>
+                <h3 className={styles.contactHeading}> PARKING </h3>
+                <p className={styles.bodyTextAbout}>
+                  <Col md="8">
+                    <span> D Lot / M Lot  </span>
+                    <p> Suggestion: park at D lot (no overnight parking) first, check-in <br />
+                    and take luggages to room, and then move your car to M lot </p>
+                  </Col>
+                  <Col md="4">
+                    <img src={phoneIcon} width={25} />
+                    <span className={styles.bodyTextAbout} style={{marginLeft: '2%'}}>
+                      view map
+                    </span>
+                  </Col>
+                </p>
+              </div>
 	          </Col>
           </Row>
         </Container>
