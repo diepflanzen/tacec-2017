@@ -90,7 +90,7 @@ export default class Contact extends React.Component {
                   </Col>
                 </p>
               </div>
-              <div>
+              {/*<div>
                 <h3 className={styles.contactHeading}> LOCAL TAXI </h3>
                 <p className={styles.bodyTextAbout}>
                   <Col md="4">
@@ -124,7 +124,7 @@ export default class Contact extends React.Component {
                     </span>
                   </Col>
                 </p>
-              </div>
+              </div>*/}
 	          </Col>
           </Row>
         </Container>
