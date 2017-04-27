@@ -4,7 +4,7 @@ import july2img from '../images/july2.jpg';
 import july3img from '../images/july3.jpg';
 import styles from '../styles.css';
 
-function Paragraph (props) {
+function Paragraph key="" (props) {
   return <p className={styles.bodyTextOTD}>{props.children}</p>
 }
 function Itemize (props) {
@@ -14,29 +14,30 @@ function Item (props) {
   return <span className={styles.bodyTextOTD}>{props.children}</span>
 }
 
+// paragraphs need a unique key each
 const OTDProgramData = Object.freeze({
   otdIntro: {
-    en: [ 
-      <Paragraph>
-        Overseas Taiwanese Democracy, aka OTD, 
+    en: [
+      <Paragraph key="p1">
+        Overseas Taiwanese Democracy, aka OTD,
         <br />
         is an activist organization that has been established since the 318 Sunflower Movement in 2014.
       </Paragraph>
       ,
-      <Paragraph>
+      <Paragraph key="p2">
         The OTD Summit of 2017 will combine NGO social activism and g0v hackathon to focus on empowering the overseas Taiwanese to make impacts on the particular international politics between Taiwan, the US, and China under globalization.
         <br />
-        Utilizing the geographical advantages, the OTD Summit aims to support Taiwan in the current geopolitical contests and advance the process of domestic transnational justice and social transformation. 
+        Utilizing the geographical advantages, the OTD Summit aims to support Taiwan in the current geopolitical contests and advance the process of domestic transnational justice and social transformation.
       </Paragraph>
     ],
     zh: [
-      <Paragraph>
+      <Paragraph key="p3">
         海外台灣青年陣線（Overseas Taiwanese for Democracy），
         <br />
         又稱海台青或 OTD，是後 318 的海外台灣人社運組織。
       </Paragraph>
       ,
-      <Paragraph>
+      <Paragraph key="p4">
         2017海台青年會結合NGO和g0v黑客松，聚焦在全球化及台美中特殊國際政治下，台灣人在海外所能發揮的影響力。
         <br />
         我們希望利用地利之便，一方面幫助台灣對外抗衡全球化浪潮和區域政治角力，一方面加速台灣內部轉型正義和社會改革的腳步！
@@ -44,33 +45,33 @@ const OTDProgramData = Object.freeze({
     ]
   },
   g0vIntro: {
-    en: [ 
-      <Paragraph>
+    en: [
+      <Paragraph key="p5">
         A 36-hour marathon for open data and data visualization. Meet people with all kinds of skills!
       </Paragraph>
       ,
-      <Paragraph>
+      <Paragraph key="p6">
         Since its first project in 2012, the g0v communities that aim to transform the government with fully transparent and decentralized framework of culture and technology have demonstrated a new way to combine activism online and offline. Since the introduction of the g0v model to the Taiwanese civil society in the US in 2014, it has brought together hundreds of people in the previous g0v hackathon sessions to create projects of data visualization and open-source softwares that have been influential to the democratic progression in Taiwan. This year, we bring together the g0v hackathon model with local NGOs and social activist groups, such as FAPA and OTD, to produce projects helpful for the Taiwanese society in various ways. If you are a designer, web developer, or have participated in FAPA or other NGOs and social activist groups, please join the hackthon and contribute your experience and talent.
       </Paragraph>
       ,
-      <Paragraph>
+      <Paragraph key="p7">
         Ask not why nobody is doing this. You are the "nobody", and “nobody” can do everything!
-      </Paragraph>    
+      </Paragraph>
     ],
     zh: [
-      <Paragraph>
+      <Paragraph key="p8">
         36 小時熱血衝刺，規劃行動方案、開發資訊與資料工具、認識十八般武藝的朋友！
       </Paragraph>
       ,
-      <Paragraph>
+      <Paragraph key="p9">
         Hackathon 給人的印象就是coding…coding…coding…但參加過 g0v 黑客松的人都知道，程式只是專案的一部份；專案的完成，更仰賴議題的發掘、強大的宣傳、有效率的地面組織戰、或對開放資料做出有影響力的詮釋。廣義來說，社運組織的輿情監控、《圖文不符》的各種懶人包、開放政治獻金的監察院影印部隊，都是不含程式的專案呢！今年，我們想嘗試一個新想法，將 g0v 黑客松的概念帶進美東的 NGO 和社運模式！
       </Paragraph>
       ,
-      <Paragraph>
+      <Paragraph key="p10">
         不要問為什麼沒有人做這個，先承認你就是「沒有人」，因為「沒有人」是萬能的！
       </Paragraph>
       ,
-      <Itemize>
+      <Itemize key="i1">
         <Item>
           所有專案初期保持開源，開放，共同協作的模式
         </Item>
