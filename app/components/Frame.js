@@ -27,7 +27,7 @@ export default class Frame extends React.Component {
   }
 
   render() {
-    const { children, prefix, lang } = this.props;
+    const { children, addPrefix, lang } = this.props;
     const viewPortWidth = window.innerWidth;
     return (
       <div>
@@ -35,7 +35,7 @@ export default class Frame extends React.Component {
           <div className={styles.headerContainer}>
             <Row>
               <Col md="5">
-                <Link to={prefix}>
+                <Link to={addPrefix("")}>
                   {
                     viewPortWidth < 600 ?
                       (<img src={smallLogo} className={styles.appBarLogo}/>) :
@@ -50,17 +50,17 @@ export default class Frame extends React.Component {
                 </span>
               </Col>
               <Col md="4" className={styles.appBarNav}>
-                <Link to={prefix.concat("about")} className={styles.navLink} activeClassName={styles.navLinkSelected}>About</Link>
-                <Link to={prefix.concat("schedule")} className={styles.navLink} activeClassName={styles.navLinkSelected}>Program</Link>
-                <Link to={prefix.concat("speaker")} className={styles.navLink} activeClassName={styles.navLinkSelected}>Speaker</Link>
-                <Link to={prefix.concat("contact")} className={styles.navLink} activeClassName={styles.navLinkSelected}>Contact</Link>
+                <Link to={addPrefix("about")} className={styles.navLink} activeClassName={styles.navLinkSelected}>About</Link>
+                <Link to={addPrefix("schedule")} className={styles.navLink} activeClassName={styles.navLinkSelected}>Program</Link>
+                <Link to={addPrefix("speaker")} className={styles.navLink} activeClassName={styles.navLinkSelected}>Speaker</Link>
+                <Link to={addPrefix("contact")} className={styles.navLink} activeClassName={styles.navLinkSelected}>Contact</Link>
               </Col>
               <Col md="3" className={styles.appBarExtra}>
                 <a href="https://tang.regfox.com/tacec-tang-conference-wotd-2017"
                   target="_blank">
                   <Button color="primary" className={styles.navButton}>REGISTER</Button>
                 </a>
-                <Link className={styles.langLinkCh} to="/">中文</Link>
+                <Link className={styles.langLinkCh} to="/zh">中文</Link>
                 <span>|</span>
                 <Link className={styles.langLinkEn} to="/en">EN</Link>
               </Col>
@@ -70,11 +70,11 @@ export default class Frame extends React.Component {
         {
           this.state.showMenu &&
           <ul className={styles.dropDownUl}>
-            <li className={styles.headerItemResponsive}><Link to="/en/about" onClick={this.handleHamburgerClick}>About</Link> </li>
-            <li className={styles.headerItemResponsive}><Link to="/en/schedule" onClick={this.handleHamburgerClick}>Program</Link> </li>
-            <li className={styles.headerItemResponsive}><Link to="/en/speakers" onClick={this.handleHamburgerClick}>Speaker</Link> </li>
-            <li className={styles.headerItemResponsive}><Link to="/en/staff" onClick={this.handleHamburgerClick}>Contact</Link> </li>
-            <li className={styles.headerItemResponsive}><Link to="/" onClick={this.handleHamburgerClick}>中文</Link> </li>
+            <li className={styles.headerItemResponsive}><Link to={addPrefix("about")} onClick={this.handleHamburgerClick}>About</Link> </li>
+            <li className={styles.headerItemResponsive}><Link to={addPrefix("schedule")} onClick={this.handleHamburgerClick}>Program</Link> </li>
+            <li className={styles.headerItemResponsive}><Link to={addPrefix("speaker")} onClick={this.handleHamburgerClick}>Speaker</Link> </li>
+            <li className={styles.headerItemResponsive}><Link to={addPrefix("contact")} onClick={this.handleHamburgerClick}>Contact</Link> </li>
+            <li className={styles.headerItemResponsive}><Link to="/zh" onClick={this.handleHamburgerClick}>中文</Link> </li>
           </ul>
         }
 	{children}

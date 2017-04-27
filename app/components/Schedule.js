@@ -11,7 +11,7 @@ import styles from '../styles.css';
 import programImg from '../images/03_Program2_03.png';
 
 
-export default class ScheduleEN extends React.Component {
+export default class Schedule extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

@@ -11,7 +11,7 @@ import styles from '../styles.css';
 import speakerImg from '../images/04_Speaker2_03.png';
 
 
-export default class SpeakerEN extends React.Component {
+export default class Speaker extends React.Component {
   render() {
     return (
       <div>
