@@ -4,7 +4,7 @@ import july2img from '../images/july2.jpg';
 import july3img from '../images/july3.jpg';
 import styles from '../styles.css';
 
-function Paragraph key="" (props) {
+function Paragraph (props) {
   return <p className={styles.bodyTextOTD}>{props.children}</p>
 }
 function Itemize (props) {
