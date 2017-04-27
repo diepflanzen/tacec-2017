@@ -44,7 +44,7 @@ export default class Landing extends React.Component {
               <div className={styles.homepageBoxContainer} style={isMobile ? {marginLeft: -10 + (viewPortWidth - 260) / 2} : {}}>
                 <Link to={toAbsPath(langPath, "schedule")}>
                   <div className={styles.homepageBox} style={isMobile ? {borderBottom: 'none'} : {borderRight: 'none'}}>
-                    <h3 className={styles.hpBoxHeading}>TACEC <br/> PROGRAM</h3>
+                    <h3 className={styles.hpBoxHeading}>TACEC<br/>PROGRAM</h3>
                     <p className={styles.hpViewMore}> {LandingData.viewMore[lang]} </p>
                     <img src={dotImg} style={{marginTop: -33}}/>
                   </div>
@@ -58,7 +58,7 @@ export default class Landing extends React.Component {
                 </a>
                 <Link to={toAbsPath(langPath, "otd")}>
                   <div className={styles.homepageBox}>
-                    <h3 className={styles.hpBoxHeading}>OTD <br /> SUMMIT</h3>
+                    <h3 className={styles.hpBoxHeading}>OTD<br/>SUMMIT</h3>
                     <p className={styles.hpViewMore}> {LandingData.viewMore[lang]} </p>
                     <img src={dotImg} style={{marginTop: -33}}/>
                   </div>
