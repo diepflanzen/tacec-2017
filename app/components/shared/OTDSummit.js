@@ -59,11 +59,11 @@ export default class Landing extends React.Component {
     );
 
     // all arguments are strings
-    const OTDProgramBody = ({title, time, speakers, description}) => {
+    const OTDProgramBody = ({title, time, speakers, description}, index) => {
       const { open, clickedTitle } = this.state;
       const amIClicked = open && clickedTitle === title;
       return (
-        <div>
+        <div key={["session",index].join("-")}>
           <div className={styles.OTDProgramBody} onClick={() => this.handleProgramClick(title)}>
             <Col md="6">
               <div style={{display: 'flex'}}>
@@ -98,21 +98,20 @@ export default class Landing extends React.Component {
       <Col md="10" md-offset="1">
         <h3 className={styles.heading}> PANEL DISCUSSION </h3>
         <div className={styles.headingBottom} />
-        {OTDProgramData.panelsByDate.map((panel, index) =>
-          [
-            <img src={panel.dateImageSource} style={{marginTop: index === 0 ? 0 : 50}} />,
-            panel.tracks.map(track =>
-              <div>
-                <h3 className={styles.OTDProgramHeading}>
-                  {track.title[lang]}
-                  <span className={styles.OTDProgramSubHeading}>
-                    {track.subtitle[lang]}
-                  </span>
-                </h3>
-                {track.sessions.map(data => OTDProgramBody(data))}
-              </div>
-            )
-          ])}
+        {OTDProgramData.panelsByDate.map((panel, panelIndex) => [
+          <img src={panel.dateImageSource} style={{marginTop: panelIndex === 0 ? 0 : 50}} />,
+          panel.tracks.map(track =>
+            <div>
+              <h3 className={styles.OTDProgramHeading}>
+                {track.title[lang]}
+                <span className={styles.OTDProgramSubHeading}>
+                  {track.subtitle[lang]}
+                </span>
+              </h3>
+              {track.sessions.map(OTDProgramBody)}
+            </div>
+          )
+        ])}
       </Col>
     );
 

@@ -7,11 +7,13 @@ import tacecLogo from '../images/tacec_logo.png';
 import tangLogo from '../images/tang_logo.png';
 import otdLogo from '../images/otd_logo.png';
 
+const textStyle = styles.bodyTextAbout
+
 function Paragraph (props) {
-  return <p className={styles.bodyTextAbout}>{props.children}</p>
+  return <p className={textStyle}>{props.children}</p>
 }
 function Item (props) {
-  return <span className={styles.bodyTextAbout}>{props.children}</span>
+  return <span className={textStyle}>{props.children}</span>
 }
 function Itemize (props) {
   return <ul>{props.children.map((item, index) => <li key={index}>{item}</li>)}</ul>
