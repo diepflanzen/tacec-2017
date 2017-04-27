@@ -50,7 +50,7 @@ export default class OTDProgram extends React.PureComponent {
     const viewPortWidth = window.innerWidth;
     const isMobile = viewPortWidth < 600;
 
-    const lang = this.props.lang === null ? "zh" : this.props.lang;
+    const lang = this.props.lang ? this.props.lang : "zh";
     const { tab } = this.state;
     const OTDSummitText = (
       <Col md="10" md-offset="1">
