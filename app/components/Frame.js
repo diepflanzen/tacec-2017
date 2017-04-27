@@ -58,7 +58,7 @@ export default class Frame extends React.Component {
               <Col md="3" className={styles.appBarExtra}>
                 <a href="https://tang.regfox.com/tacec-tang-conference-wotd-2017"
                   target="_blank">
-                  <Button color="primary" className={styles.navButton}>REGISTER</Button>
+                  <Button color="primary" className={styles.navButton}>Register</Button>
                 </a>
                 <Link className={styles.langLinkCh} to="/zh">中文</Link>
                 <span>|</span>
