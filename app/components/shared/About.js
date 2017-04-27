@@ -43,8 +43,8 @@ export default class LandingEN extends React.Component {
         <div className={styles.tabBand}>
           {AboutData.organizations.map((org, index) =>
             <div key={index} className={tab === index
-              ? (index == 0 ? styles.tabCategoryLeftActive : styles.tabCategoryActive)
-              : (index == 0 ? styles.tabCategoryLeft : styles.tabCategory)} onClick={() => this.tabClick(index)}>
+              ? (index === 0 ? styles.tabCategoryLeftActive : styles.tabCategoryActive)
+              : (index === 0 ? styles.tabCategoryLeft : styles.tabCategory)} onClick={() => this.tabClick(index)}>
               {org.name[lang]}
             </div>
           )}
