@@ -20,12 +20,11 @@ import minusSign from '../../images/minusSign.jpg';
 
 import OTDProgramData from '../../data/OTDProgramData';
 
-export default class Landing extends React.Component {
+export default class Landing extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      open: false,
-      clickedTitle: '',
+      openedTitle: null, // null means everything is closed
       isSubsidyDialogOpen: false,
       isProjectListDialogOpen: false
     };
@@ -33,8 +32,7 @@ export default class Landing extends React.Component {
 
   handleProgramClick = (title) => {
     this.setState({
-      open: this.state.clickedTitle === title ? !this.state.open : true,
-      clickedTitle: title
+      openedTitle: this.state.openedTitle === title ? null : title
     });
   }
 
@@ -60,8 +58,8 @@ export default class Landing extends React.Component {
 
     // all arguments are strings
     const OTDProgramBody = ({title, time, speakers, description}, index) => {
-      const { open, clickedTitle } = this.state;
-      const amIClicked = open && clickedTitle === title;
+      const { openedTitle } = this.state;
+      const amIClicked = openedTitle === title;
       return (
         <div key={["session",index].join("-")}>
           <div className={styles.OTDProgramBody} onClick={() => this.handleProgramClick(title)}>
