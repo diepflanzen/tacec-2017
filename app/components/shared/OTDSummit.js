@@ -7,6 +7,7 @@ import Divider from 'muicss/lib/react/divider';
 import Row from 'muicss/lib/react/row';
 import Col from 'muicss/lib/react/col';
 import { Motion, spring } from 'react-motion';
+import Dialog from 'material-ui/Dialog';
 
 import styles from '../../styles.css';
 import otdImg from '../../images/otd_summit.png';
@@ -24,7 +25,9 @@ export default class Landing extends React.Component {
     super(props);
     this.state = {
       open: false,
-      clickedTitle: ''
+      clickedTitle: '',
+      isSubsidyDialogOpen: false,
+      isProjectListDialogOpen: false
     };
   }
 
@@ -34,6 +37,14 @@ export default class Landing extends React.Component {
       clickedTitle: title
     });
   }
+
+  handleOpen = () => {
+    this.setState({isSubsidyDialogOpen: true});
+  };
+
+  handleClose = () => {
+    this.setState({isSubsidyDialogOpen: false});
+  };
 
   render() {
     const lang = this.props.lang;
@@ -105,6 +116,7 @@ export default class Landing extends React.Component {
       </Col>
     );
 
+
     return (
       <div>
         <div className={styles.aboutImgContainer}><img src={otdImg} alt="OTD Summit image" className={styles.otdImg}/></div>
@@ -113,8 +125,17 @@ export default class Landing extends React.Component {
             {OTDSummitText}
           </Row>
           <Row>
-            <Button color="primary" className={styles.OTDButton}>專案列表</Button>
-            <Button color="primary" className={styles.OTDButton} style={{marginLeft: window.innerWidth < 500 ? 0 : 7}}>補助辦法</Button>
+            <a href="https://g0vus.hackpad.com/2017-g0v--vkwG8i3qu5z" target="_blank">
+              <Button color="primary" className={styles.OTDButton}>專案列表</Button>
+            </a>
+            <Button
+              color="primary"
+              className={styles.OTDButton}
+              style={{marginLeft: window.innerWidth < 500 ? 0 : 7}}
+              onClick={this.handleOpen}
+            >
+              補助辦法
+            </Button>
           </Row>
           <Row>
             {panelDiscussion}
@@ -126,6 +147,19 @@ export default class Landing extends React.Component {
             <Button color="primary" className={styles.applyNowButton}>Register Now</Button>
           </a>
         </div>
+        <Dialog
+          title="報名費與補助"
+          modal={false}
+          open={this.state.isSubsidyDialogOpen}
+          onRequestClose={this.handleClose}
+        >
+          黑客松貢獻者能獲得交通補助以及 $80 的報名費補助
+          若您參與的專案有在最後一天的大會中進行成果報告，並且您在專案小組名單上，OTD可能通交通費以及報名費補助:
+          報名費補助： $80
+          旅遊補助 以下擇一
+          開車
+          飛機火車
+        </Dialog>
       </div>
     );
   }
