@@ -12,6 +12,8 @@ import Container from 'muicss/lib/react/container';
 import Dropdown from 'muicss/lib/react/dropdown';
 import DropdownItem from 'muicss/lib/react/dropdown-item';
 
+import { toAbsPath, getRelPath } from '../utils'
+
 export default class Frame extends React.Component {
   constructor(props) {
     super(props);
@@ -27,7 +29,10 @@ export default class Frame extends React.Component {
   }
 
   render() {
-    const { children, addPrefix, lang } = this.props;
+    const { children } = this.props;
+    const langPath = this.props.lang;
+    const lang = langPath ? langPath : "en";
+    const relPath = getRelPath(this.props);
     const viewPortWidth = window.innerWidth;
     return (
       <div>
@@ -35,7 +40,7 @@ export default class Frame extends React.Component {
           <div className={styles.headerContainer}>
             <Row>
               <Col md="5">
-                <Link to={addPrefix("")}>
+                <Link to={toAbsPath(langPath, "")}>
                   {
                     viewPortWidth < 600 ?
                       (<img src={smallLogo} className={styles.appBarLogo}/>) :
@@ -50,19 +55,19 @@ export default class Frame extends React.Component {
                 </span>
               </Col>
               <Col md="4" className={styles.appBarNav}>
-                <Link to={addPrefix("about")} className={styles.navLink} activeClassName={styles.navLinkSelected}>About</Link>
-                <Link to={addPrefix("schedule")} className={styles.navLink} activeClassName={styles.navLinkSelected}>Program</Link>
-                <Link to={addPrefix("speaker")} className={styles.navLink} activeClassName={styles.navLinkSelected}>Speaker</Link>
-                <Link to={addPrefix("contact")} className={styles.navLink} activeClassName={styles.navLinkSelected}>Contact</Link>
+                <Link to={toAbsPath(langPath, "about")} className={styles.navLink} activeClassName={styles.navLinkSelected}>About</Link>
+                <Link to={toAbsPath(langPath, "schedule")} className={styles.navLink} activeClassName={styles.navLinkSelected}>Program</Link>
+                <Link to={toAbsPath(langPath, "speaker")} className={styles.navLink} activeClassName={styles.navLinkSelected}>Speaker</Link>
+                <Link to={toAbsPath(langPath, "contact")} className={styles.navLink} activeClassName={styles.navLinkSelected}>Contact</Link>
               </Col>
               <Col md="3" className={styles.appBarExtra}>
                 <a href="https://tang.regfox.com/tacec-tang-conference-wotd-2017"
                   target="_blank">
                   <Button color="primary" className={styles.navButton}>Register</Button>
                 </a>
-                <Link className={styles.langLinkCh} to="/zh">中文</Link>
+                <Link className={styles.langLinkCh} to={toAbsPath("zh",relPath)}>中文</Link>
                 <span>|</span>
-                <Link className={styles.langLinkEn} to="/en">EN</Link>
+                <Link className={styles.langLinkEn} to={toAbsPath("en",relPath)}>EN</Link>
               </Col>
             </Row>
           </div>
@@ -70,11 +75,11 @@ export default class Frame extends React.Component {
         {
           this.state.showMenu &&
           <ul className={styles.dropDownUl}>
-            <li className={styles.headerItemResponsive}><Link to={addPrefix("about")} onClick={this.handleHamburgerClick}>About</Link> </li>
-            <li className={styles.headerItemResponsive}><Link to={addPrefix("schedule")} onClick={this.handleHamburgerClick}>Program</Link> </li>
-            <li className={styles.headerItemResponsive}><Link to={addPrefix("speaker")} onClick={this.handleHamburgerClick}>Speaker</Link> </li>
-            <li className={styles.headerItemResponsive}><Link to={addPrefix("contact")} onClick={this.handleHamburgerClick}>Contact</Link> </li>
-            <li className={styles.headerItemResponsive}><Link to="/zh" onClick={this.handleHamburgerClick}>中文</Link> </li>
+            <li className={styles.headerItemResponsive}><Link to={toAbsPath(langPath, "about")} onClick={this.handleHamburgerClick}>About</Link> </li>
+            <li className={styles.headerItemResponsive}><Link to={toAbsPath(langPath, "schedule")} onClick={this.handleHamburgerClick}>Program</Link> </li>
+            <li className={styles.headerItemResponsive}><Link to={toAbsPath(langPath, "speaker")} onClick={this.handleHamburgerClick}>Speaker</Link> </li>
+            <li className={styles.headerItemResponsive}><Link to={toAbsPath(langPath, "contact")} onClick={this.handleHamburgerClick}>Contact</Link> </li>
+            <li className={styles.headerItemResponsive}><Link to={toAbsPath((lang==="en"?"zh":"en"),relPath)} onClick={this.handleHamburgerClick}>{(lang==="en"?"中文":"English")}</Link> </li>
           </ul>
         }
 	{children}
