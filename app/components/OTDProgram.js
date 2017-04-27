@@ -9,18 +9,18 @@ import Col from 'muicss/lib/react/col';
 import { Motion, spring } from 'react-motion';
 import Dialog from 'material-ui/Dialog';
 
-import styles from '../../styles.css';
-import otdImg from '../../images/otd_summit.png';
+import styles from '../styles.css';
+import otdImg from '../images/otd_summit.png';
 
-import logo from '../../images/tacec_logo.png';
-import tangLogo from '../../images/tang_logo.png';
-import otdLogo from '../../images/otd_logo.png';
-import plusSign from '../../images/plusSign.jpg';
-import minusSign from '../../images/minusSign.jpg';
+import logo from '../images/tacec_logo.png';
+import tangLogo from '../images/tang_logo.png';
+import otdLogo from '../images/otd_logo.png';
+import plusSign from '../images/plusSign.jpg';
+import minusSign from '../images/minusSign.jpg';
 
-import OTDProgramData from '../../data/OTDProgramData';
+import OTDProgramData from '../data/OTDProgramData';
 
-export default class Landing extends React.PureComponent {
+export default class OTDProgram extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -45,7 +45,7 @@ export default class Landing extends React.PureComponent {
   };
 
   render() {
-    const lang = this.props.lang;
+    const lang = this.props.lang === null ? "zh" : this.props.lang;
     const { tab } = this.state;
     const OTDSummitText = (
       <Col md="10" md-offset="1">
@@ -130,7 +130,7 @@ export default class Landing extends React.PureComponent {
       <div>
         <div className={styles.aboutImgContainer}><img src={otdImg} alt="OTD Summit image" className={styles.otdImg}/></div>
         <Container className={styles.landingBody}>
-        	<Row style={{marginBottom: 55}}>
+		<Row style={{marginBottom: 55}}>
             {OTDSummitText}
           </Row>
           <Row>

@@ -1,41 +1,53 @@
 import React from 'react';
 import { render } from 'react-dom';
-import EnPages from './components/English/EnPages';
-import LandingEN from './components/English/LandingEN';
-import ScheduleEN from './components/English/ScheduleEN';
-import SpeakersEN from './components/English/SpeakersEN';
-import AboutEN from './components/English/AboutEN';
-import StaffEN from './components/English/StaffEN';
-import OTDSummitEN from './components/English/OTDSummitEN';
+import Frame from './components/Frame';
+import Landing from './components/Landing';
+import About from './components/About';
+import Schedule from './components/Schedule';
+import Speaker from './components/Speaker';
+import Contact from './components/Contact';
+import OTDProgram from './components/OTDProgram';
 import { Router, Route, IndexRoute, hashHistory, applyRouterMiddleware } from 'react-router';
 import { useScroll } from 'react-router-scroll';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
+const components = Object.freeze({
+  frame: Frame,
+  landing: Landing,
+  topPages: [
+    {path: "about",    component: About},
+    {path: "schedule", component: Schedule},
+    {path: "speaker",  component: Speaker},
+    {path: "contact",  component: Contact},
+    {path: "otd",      component: OTDProgram},
+  ]
+});
+
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin();
+
+function routeSet (prefix, lang) {
+  const wrapper = (Component) => (props) =>
+    <Component {...props} prefix={prefix} lang={lang}/>
+  return(
+    <Route path={prefix} component={wrapper(components.frame)}>
+      <IndexRoute component={wrapper(components.landing)} />
+      {components.topPages.map((page, index) =>
+        <Route key={index} path={page.path} component={wrapper(page.component)} />
+      )}
+    </Route>);
+}
 
 class App extends React.Component {
   render() {
     return (
       <MuiThemeProvider>
         <Router history={hashHistory} render={applyRouterMiddleware(useScroll())} >
-          <Route path="/" component={EnPages}>
-            <IndexRoute component={LandingEN} />
-            <Route path="/staff" component={StaffEN} />
-            <Route path="/about" component={AboutEN} />
-            <Route path="/schedule" component={ScheduleEN} />
-            <Route path="/speakers" component={SpeakersEN} />
-            <Route path="/otd" component={OTDSummitEN} />
-          </Route>
-          <Route path="/en" component={EnPages}>
-          	<IndexRoute component={LandingEN} />
-            <Route path="/en/about" component={AboutEN} />
-            <Route path="/en/staff" component={StaffEN} />
-            <Route path="/en/schedule" component={ScheduleEN} />
-            <Route path="/en/speakers" component={SpeakersEN} />
-          </Route>
+          {routeSet ("/", null)}
+          {routeSet ("/en/", "en")}
+          {routeSet ("/zh/", "zh")}
         </Router>
       </MuiThemeProvider>
     );

@@ -7,8 +7,8 @@ import Divider from 'muicss/lib/react/divider';
 import Row from 'muicss/lib/react/row';
 import Col from 'muicss/lib/react/col';
 
-import styles from '../../styles.css';
-import speakerImg from '../../images/04_Speaker2_03.png';
+import styles from '../styles.css';
+import speakerImg from '../images/04_Speaker2_03.png';
 
 
 export default class SpeakerEN extends React.Component {
@@ -17,10 +17,10 @@ export default class SpeakerEN extends React.Component {
       <div>
         <div className={styles.aboutImgContainer}><img src={speakerImg} alt="Speaker icon image" className={styles.aboutImg}/></div>
         <Container className={styles.landingBody}>
-        	<Row>
+		<Row>
 	          <Col md="10" md-offset="1">
               <div style={{height: 500}}>
-    	          <p className={styles.bodyTextAbout}>
+	          <p className={styles.bodyTextAbout}>
                   TAC/EC speaker details are coming soon!
                 </p>
               </div>

@@ -7,8 +7,8 @@ import Divider from 'muicss/lib/react/divider';
 import Row from 'muicss/lib/react/row';
 import Col from 'muicss/lib/react/col';
 
-import styles from '../../styles.css';
-import programImg from '../../images/03_Program2_03.png';
+import styles from '../styles.css';
+import programImg from '../images/03_Program2_03.png';
 
 
 export default class ScheduleEN extends React.Component {
@@ -227,7 +227,7 @@ export default class ScheduleEN extends React.Component {
           </div>
         </div>
         <Container className={styles.landingBody}>
-        	<Row>
+		<Row>
             {/*<div className={styles.panelDetails}>
               <div className={styles.panelDetailContent}>
                 <small> July 2, Sunday 3:00 pm </small>
@@ -244,7 +244,7 @@ export default class ScheduleEN extends React.Component {
             </div>*/}
 	          <Col md="10" md-offset="1">
               <div style={{height: 800}}>
-    	          <p className={styles.bodyTextAbout}>
+	          <p className={styles.bodyTextAbout}>
                   {tab === 0 ? July1Schedule : (tab === 1 ? July2Schedule : (tab === 2 ? July3Schedule : July4Schedule))}
                 </p>
               </div>

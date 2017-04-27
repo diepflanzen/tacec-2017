@@ -7,11 +7,11 @@ import Divider from 'muicss/lib/react/divider';
 import Row from 'muicss/lib/react/row';
 import Col from 'muicss/lib/react/col';
 
-import styles from '../../styles.css';
+import styles from '../styles.css';
 
-import AboutData from '../../data/AboutData';
+import AboutData from '../data/AboutData';
 
-export default class LandingEN extends React.PureComponent {
+export default class About extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -24,7 +24,7 @@ export default class LandingEN extends React.PureComponent {
   }
 
   render() {
-    const lang = this.props.lang;
+    const lang = this.props.lang === null ? "en" : this.props.lang;
     const { tab } = this.state;
     const org = AboutData.organizations[tab];
     const text =

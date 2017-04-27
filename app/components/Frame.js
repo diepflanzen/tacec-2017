@@ -5,15 +5,14 @@ import Row from 'muicss/lib/react/row';
 import Col from 'muicss/lib/react/col';
 import { Link } from 'react-router';
 import Button from 'muicss/lib/react/button';
-import styles from '../../styles.css';
-import logo from '../../images/logo.png';
-import smallLogo from '../../images/logo_small.png';
-import LandingEN from './LandingEN';
+import styles from '../styles.css';
+import logo from '../images/logo.png';
+import smallLogo from '../images/logo_small.png';
 import Container from 'muicss/lib/react/container';
 import Dropdown from 'muicss/lib/react/dropdown';
 import DropdownItem from 'muicss/lib/react/dropdown-item';
 
-export default class ChPages extends React.Component {
+export default class Frame extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -28,7 +27,7 @@ export default class ChPages extends React.Component {
   }
 
   render() {
-  	const { children } = this.props;
+    const { children, prefix, lang } = this.props;
     const viewPortWidth = window.innerWidth;
     return (
       <div>
@@ -36,7 +35,7 @@ export default class ChPages extends React.Component {
           <div className={styles.headerContainer}>
             <Row>
               <Col md="5">
-                <Link to="/en">
+                <Link to={prefix}>
                   {
                     viewPortWidth < 600 ?
                       (<img src={smallLogo} className={styles.appBarLogo}/>) :
@@ -51,10 +50,10 @@ export default class ChPages extends React.Component {
                 </span>
               </Col>
               <Col md="4" className={styles.appBarNav}>
-                <Link to="/en/about" className={styles.navLink} activeClassName={styles.navLinkSelected}>About</Link>
-                <Link to="/en/schedule" className={styles.navLink} activeClassName={styles.navLinkSelected}>Program</Link>
-                <Link to="/en/speakers" className={styles.navLink} activeClassName={styles.navLinkSelected}>Speaker</Link>
-                <Link to="/en/staff" className={styles.navLink} activeClassName={styles.navLinkSelected}>Contact</Link>
+                <Link to={prefix.concat("about")} className={styles.navLink} activeClassName={styles.navLinkSelected}>About</Link>
+                <Link to={prefix.concat("schedule")} className={styles.navLink} activeClassName={styles.navLinkSelected}>Program</Link>
+                <Link to={prefix.concat("speaker")} className={styles.navLink} activeClassName={styles.navLinkSelected}>Speaker</Link>
+                <Link to={prefix.concat("contact")} className={styles.navLink} activeClassName={styles.navLinkSelected}>Contact</Link>
               </Col>
               <Col md="3" className={styles.appBarExtra}>
                 <a href="https://tang.regfox.com/tacec-tang-conference-wotd-2017"
@@ -78,7 +77,7 @@ export default class ChPages extends React.Component {
             <li className={styles.headerItemResponsive}><Link to="/" onClick={this.handleHamburgerClick}>中文</Link> </li>
           </ul>
         }
-       	{children}
+	{children}
         <Appbar className={styles.footer}>
           <Container>
             <Row>

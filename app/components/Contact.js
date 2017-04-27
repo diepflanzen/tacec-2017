@@ -7,18 +7,18 @@ import Divider from 'muicss/lib/react/divider';
 import Row from 'muicss/lib/react/row';
 import Col from 'muicss/lib/react/col';
 
-import styles from '../../styles.css';
-import contactImg from '../../images/06_Contact_03.jpg';
-import emailIcon from '../../images/06_Contact_07-09.png';
-import phoneIcon from '../../images/06_Contact_07.png';
+import styles from '../styles.css';
+import contactImg from '../images/06_Contact_03.jpg';
+import emailIcon from '../images/06_Contact_07-09.png';
+import phoneIcon from '../images/06_Contact_07.png';
 
-export default class StaffEN extends React.Component {
+export default class Contact extends React.Component {
   render() {
     return (
       <div>
         <div className={styles.aboutImgContainer}><img src={contactImg} alt="Contact icon image" className={styles.aboutImg}/></div>
         <Container className={styles.landingBody}>
-        	<Row>
+		<Row>
 	          <Col md="10" md-offset="1">
               <div className={styles.staffCard}>
                 <h3 className={styles.contactHeading}> TACEC <span style={{fontSize: 18, float: 'right'}}>TAIWANESE AMERICAN CONFERENCE / EAST COAST </span></h3>
@@ -53,7 +53,7 @@ export default class StaffEN extends React.Component {
               </div>
               <div className={styles.staffCard}>
                 <h3 className={styles.contactHeading}> TANG <span style={{fontSize: 18, float: 'right'}}>TAIWANESE AMERICAN NEXT GENERATION </span></h3>
-    	          <p className={styles.bodyTextAbout}>
+	          <p className={styles.bodyTextAbout}>
                   <Col md="4">
                     <span> Jenny Kao / Alex Chang </span>
                   </Col>
@@ -67,7 +67,7 @@ export default class StaffEN extends React.Component {
               </div>
               <div className={styles.staffCard}>
                 <h3 className={styles.contactHeading}> OTD <span style={{fontSize: 18, float: 'right'}}>OVERSEAS TAIWANESE FOR DEMOCRACY </span></h3>
-    	          <p className={styles.bodyTextAbout}>
+	          <p className={styles.bodyTextAbout}>
                   <Col md="4">
                     <span> Yu-Chien Tseng  </span>
                   </Col>
