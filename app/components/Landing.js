@@ -19,8 +19,9 @@ import mapInfo from '../images/map_info.png';
 import dotImg from '../images/dot.png';
 import GoogleMapReact from 'google-map-react';
 
-export default class LandingEN extends React.Component {
+export default class Landing extends React.Component {
   render() {
+    const { addPrefix } = this.props
     const viewPortWidth = window.innerWidth;
     const isMobile = viewPortWidth < 600;
     const mapCenter = isMobile ? [39.9518694, -75.602182] : [39.9662578,-75.1395344];
@@ -52,7 +53,7 @@ export default class LandingEN extends React.Component {
                 Get excited for July 4th weekend! We can't wait to see you all!
 	          </p>
               <div className={styles.homepageBoxContainer} style={isMobile ? {marginLeft: -10 + (viewPortWidth - 260) / 2} : {}}>
-                <Link to="/schedule">
+                <Link to={addPrefix("schedule")}>
                   <div className={styles.homepageBox} style={isMobile ? {borderBottom: 'none'} : {borderRight: 'none'}}>
                     <h3 className={styles.hpBoxHeading}>TACEC <br/> PROGRAM</h3>
                     <p className={styles.hpViewMore}> view more </p>
@@ -66,7 +67,7 @@ export default class LandingEN extends React.Component {
                     <img src={dotImg} style={{marginTop: -33}}/>
                   </div>
                 </a>
-                <Link to="/otd">
+                <Link to={addPrefix("otd")}>
                   <div className={styles.homepageBox}>
                     <h3 className={styles.hpBoxHeading}>OTD <br /> SUMMIT</h3>
                     <p className={styles.hpViewMore}> view more </p>

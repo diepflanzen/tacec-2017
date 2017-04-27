@@ -28,11 +28,11 @@ const components = Object.freeze({
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin();
 
-function routeSet (prefix, lang) {
+function routeSet (addPrefix, lang) {
   const wrapper = (Component) => (props) =>
-    <Component {...props} prefix={prefix} lang={lang}/>
+    <Component {...props} addPrefix={addPrefix} lang={lang}/>
   return(
-    <Route path={prefix} component={wrapper(components.frame)}>
+    <Route path={addPrefix("")} component={wrapper(components.frame)}>
       <IndexRoute component={wrapper(components.landing)} />
       {components.topPages.map((page, index) =>
         <Route key={index} path={page.path} component={wrapper(page.component)} />
@@ -45,9 +45,9 @@ class App extends React.Component {
     return (
       <MuiThemeProvider>
         <Router history={hashHistory} render={applyRouterMiddleware(useScroll())} >
-          {routeSet ("/", null)}
-          {routeSet ("/en/", "en")}
-          {routeSet ("/zh/", "zh")}
+          {routeSet (((path)=>"/".concat(path)), null)}
+          {routeSet (((path)=>path===""?"/en":"/en/".concat(path)), "en")}
+          {routeSet (((path)=>path===""?"/zh":"/zh/".concat(path)), "zh")}
         </Router>
       </MuiThemeProvider>
     );
