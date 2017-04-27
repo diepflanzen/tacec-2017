@@ -58,6 +58,18 @@ export default class Landing extends React.Component {
       </Col>
     );
 
+    const subsidyDialogTitleStyle = {
+      fontSize: 33,
+      color: '#64a680',
+      fontWeight: 'bolder',
+      paddingTop: 65,
+      paddingLeft: 65
+    };
+
+    const subsidyDialogBodyStyle = {
+      padding: '0px 65px 24px'
+    };
+
     // all arguments are strings
     const OTDProgramBody = ({title, time, speakers, description}) => {
       const { open, clickedTitle } = this.state;
@@ -149,10 +161,18 @@ export default class Landing extends React.Component {
         </div>
         <Dialog
           title="報名費與補助"
+          titleStyle={subsidyDialogTitleStyle}
+          bodyStyle={subsidyDialogBodyStyle}
           modal={false}
           open={this.state.isSubsidyDialogOpen}
           onRequestClose={this.handleClose}
         >
+          <div style={{display: 'flex', color: '#64a680'}}>
+            <div>早鳥 $</div>
+            <div>180</div>
+            <div>早鳥 $</div>
+            <div>早鳥 $</div>
+          </div>
           黑客松貢獻者能獲得交通補助以及 $80 的報名費補助
           若您參與的專案有在最後一天的大會中進行成果報告，並且您在專案小組名單上，OTD可能通交通費以及報名費補助:
           報名費補助： $80
