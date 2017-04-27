@@ -4,7 +4,7 @@ import EnPages from './components/English/EnPages';
 import LandingEN from './components/English/LandingEN';
 import ScheduleEN from './components/English/ScheduleEN';
 import SpeakersEN from './components/English/SpeakersEN';
-import AboutEN from './components/English/about';
+import AboutEN from './components/English/AboutEN';
 import StaffEN from './components/English/StaffEN';
 import OTDSummitEN from './components/English/OTDSummitEN';
 import { Router, Route, IndexRoute, hashHistory, applyRouterMiddleware } from 'react-router';
