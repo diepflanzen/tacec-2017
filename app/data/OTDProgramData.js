@@ -16,7 +16,19 @@ function Item (props) {
 
 const OTDProgramData = Object.freeze({
   otdIntro: {
-    en: [ ],
+    en: [ 
+      <Paragraph>
+        Overseas Taiwanese Democracy, aka OTD, 
+        <br />
+        is an activist organization that has been established since the 318 Sunflower Movement in 2014.
+      </Paragraph>
+      ,
+      <Paragraph>
+        The OTD Summit of 2017 will combine NGO social activism and g0v hackathon to focus on empowering the overseas Taiwanese to make impacts on the particular international politics between Taiwan, the US, and China under globalization.
+        <br />
+        Utilizing the geographical advantages, the OTD Summit aims to support Taiwan in the current geopolitical contests and advance the process of domestic transnational justice and social transformation. 
+      </Paragraph>
+    ],
     zh: [
       <Paragraph>
         海外台灣青年陣線（Overseas Taiwanese for Democracy），
@@ -200,7 +212,7 @@ const OTDProgramData = Object.freeze({
               time: '14:00 - 14:50',
               speakers: {
                 en: '',
-                zh: '賴中強 | 吳濬彥 | 林捷',
+                zh: '賴中強 | 吳濬彥 | 林倢',
               },
               description: {
                 en: '',
