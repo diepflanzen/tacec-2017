@@ -100,7 +100,7 @@ export default class Landing extends React.Component {
         <div className={styles.headingBottom} />
         {OTDProgramData.panelsByDate.map((panel, index) =>
           [
-            <img src={panel.dateImageSource} style={{marginTop: index === 1 ? 50 : 0}} />,
+            <img src={panel.dateImageSource} style={{marginTop: index === 0 ? 0 : 50}} />,
             panel.tracks.map(track =>
               <div>
                 <h3 className={styles.OTDProgramHeading}>
