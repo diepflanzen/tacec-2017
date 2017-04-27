@@ -17,6 +17,8 @@ import tangLogo from '../images/tang_logo.png';
 import otdLogo from '../images/otd_logo.png';
 import plusSign from '../images/plusSign.jpg';
 import minusSign from '../images/minusSign.jpg';
+import carImg from '../images/car.jpg';
+import planeImg from '../images/plane.jpg';
 
 import OTDProgramData from '../data/OTDProgramData';
 
@@ -45,6 +47,9 @@ export default class OTDProgram extends React.PureComponent {
   };
 
   render() {
+    const viewPortWidth = window.innerWidth;
+    const isMobile = viewPortWidth < 600;
+
     const lang = this.props.lang === null ? "zh" : this.props.lang;
     const { tab } = this.state;
     const OTDSummitText = (
@@ -60,12 +65,14 @@ export default class OTDProgram extends React.PureComponent {
       fontSize: 33,
       color: '#64a680',
       fontWeight: 'bolder',
-      paddingTop: 65,
-      paddingLeft: 65
+      paddingTop: isMobile ? 35 : 65,
+      paddingLeft: isMobile ? 45: 65,
+      letterSpacing: isMobile ? 2 : 9
     };
 
     const subsidyDialogBodyStyle = {
-      padding: '0px 65px 24px'
+      padding: isMobile ? '0px 25px 24px' : '0px 65px 24px',
+      letterSpacing: 0.5
     };
 
     // all arguments are strings
@@ -125,7 +132,6 @@ export default class OTDProgram extends React.PureComponent {
       </Col>
     );
 
-
     return (
       <div>
         <div className={styles.aboutImgContainer}><img src={otdImg} alt="OTD Summit image" className={styles.otdImg}/></div>
@@ -163,19 +169,46 @@ export default class OTDProgram extends React.PureComponent {
           modal={false}
           open={this.state.isSubsidyDialogOpen}
           onRequestClose={this.handleClose}
+          autoScrollBodyContent={true}
         >
           <div style={{display: 'flex', color: '#64a680'}}>
-            <div>早鳥 $</div>
-            <div>180</div>
-            <div>早鳥 $</div>
-            <div>早鳥 $</div>
+            <div style={{paddingTop: 10, paddingLeft: 10, fontWeight: 'bolder'}}>早鳥  $</div>
+            <div style={{fontSize: 33, paddingTop: isMobile ? 18 : 0}}>180</div>
+            <div style={{fontSize: 12, paddingTop: 25, paddingLeft: 5, color: '#777'}}> (5/15 之前）</div>
+            <div style={{paddingTop: 10, paddingLeft: 10, fontWeight: 'bolder'}}>一般  $</div>
+            <div style={{fontSize: 33, paddingTop: isMobile ? 18 : 0}}>190 </div>
           </div>
-          黑客松貢獻者能獲得交通補助以及 $80 的報名費補助
-          若您參與的專案有在最後一天的大會中進行成果報告，並且您在專案小組名單上，OTD可能通交通費以及報名費補助:
-          報名費補助： $80
-          旅遊補助 以下擇一
-          開車
-          飛機火車
+          <div style={{width: '100%', borderBottom: '3px solid #17906a', padding: '10px 0px 10px', fontSize: 12}}>
+            黑客松貢獻者能獲得交通補助以及 $80 的報名費補助
+          </div>
+          <div style={{padding: '50px 0px 10px'}}>
+            <div style={{fontSize: 15}}>若您參與的專案有在最後一天的大會中進行成果報告，並且您在專案小組名單上，OTD可提供通交通費以及報名費補助:</div>
+            <div style={{display: 'flex', color: '#64a680'}}>
+              <div style={{paddingTop: 10, fontWeight: 'bolder'}}>
+                - 報名費補助:  $</div>
+              <div style={{fontSize: 33}}>80</div>
+            </div>
+            <div style={{marginBottom: 25, color: '#64a680', fontWeight: 'bolder'}}>
+              - 旅遊補助 (以下擇一):
+            </div>
+            <div className={styles.popupBoxContainer}>
+              <div className={styles.popupBox} style={isMobile ? {borderBottom: 'none'} : {borderRight: 'none'}}>
+                <img src={carImg} style={{marginLeft: '25%'}}/>
+                <p style={{fontSize: 12, marginTop: 25}}>
+                  開車：每車每英哩補助 $0.50, 最高 $100
+                </p>
+              </div>
+              <div className={styles.popupBox}>
+                <img src={planeImg} style={{marginLeft: '25%'}}/>
+                <p style={{fontSize: 12, marginTop: 25}}>
+                  飛機,火車及公車 (皆為實報實銷)：<br/>
+                  - 東岸時區：最高 $100 <br/>
+                  - 中部時區: 最高 $200 <br/>
+                  - 西岸時區 (包含山區時區): 最高 $300
+                </p>
+              </div>
+            </div>
+          </div>
         </Dialog>
       </div>
     );

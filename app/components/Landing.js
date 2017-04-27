@@ -74,6 +74,9 @@ export default class LandingEN extends React.Component {
                   </div>
                 </Link>
               </div>
+              <a href="https://goo.gl/f0fsCf" target="_blank">
+                <Button color="primary" className={styles.dlFormButton}>Download Registration Form</Button>
+              </a>
 	          </Col>
           </Row>
         </Container>

@@ -398,6 +398,44 @@ li {
 
 /* End Home Page Box */
 
+/* OTD Subsidy Pop Up */
+
+.popupBoxContainer {
+  composes: homepageBoxContainer;
+  margin-top: 0;
+}
+
+.popupBox {
+  composes: homepageBox;
+  width: 300px;
+  height: 200px;
+  padding: 20px
+}
+
+@media (max-width: 520px) {
+  .popupBox {
+    width: 100%;
+    height: 240px;
+  }
+
+  .popupBoxContainer {
+    display: block;
+    margin-left: 0;
+  }
+}
+
+/* END Pop Up */
+
+.dlFormButton {
+  composes: OTDButton;
+  width: 365px;
+  margin-top: 75px;
+  height: 60px;
+  font-size: 20px;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+
 .bodyText {
   color: #444;
   font-size: 16px;
