@@ -20,12 +20,11 @@ import minusSign from '../../images/minusSign.jpg';
 
 import OTDProgramData from '../../data/OTDProgramData';
 
-export default class Landing extends React.Component {
+export default class Landing extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      open: false,
-      clickedTitle: '',
+      openedTitle: null, // null means everything is closed
       isSubsidyDialogOpen: false,
       isProjectListDialogOpen: false
     };
@@ -33,8 +32,7 @@ export default class Landing extends React.Component {
 
   handleProgramClick = (title) => {
     this.setState({
-      open: this.state.clickedTitle === title ? !this.state.open : true,
-      clickedTitle: title
+      openedTitle: this.state.openedTitle === title ? null : title
     });
   }
 
@@ -71,11 +69,11 @@ export default class Landing extends React.Component {
     };
 
     // all arguments are strings
-    const OTDProgramBody = ({title, time, speakers, description}) => {
-      const { open, clickedTitle } = this.state;
-      const amIClicked = open && clickedTitle === title;
+    const OTDProgramBody = ({title, time, speakers, description}, index) => {
+      const { openedTitle } = this.state;
+      const amIClicked = openedTitle === title;
       return (
-        <div>
+        <div key={["session",index].join("-")}>
           <div className={styles.OTDProgramBody} onClick={() => this.handleProgramClick(title)}>
             <Col md="6">
               <div style={{display: 'flex'}}>
@@ -110,21 +108,20 @@ export default class Landing extends React.Component {
       <Col md="10" md-offset="1">
         <h3 className={styles.heading}> PANEL DISCUSSION </h3>
         <div className={styles.headingBottom} />
-        {OTDProgramData.panelsByDate.map((panel, index) =>
-          [
-            <img src={panel.dateImageSource} style={{marginTop: index === 0 ? 0 : 50}} />,
-            panel.tracks.map(track =>
-              <div>
-                <h3 className={styles.OTDProgramHeading}>
-                  {track.title[lang]}
-                  <span className={styles.OTDProgramSubHeading}>
-                    {track.subtitle[lang]}
-                  </span>
-                </h3>
-                {track.sessions.map(data => OTDProgramBody(data))}
-              </div>
-            )
-          ])}
+        {OTDProgramData.panelsByDate.map((panel, panelIndex) => [
+          <img src={panel.dateImageSource} style={{marginTop: panelIndex === 0 ? 0 : 50}} />,
+          panel.tracks.map(track =>
+            <div>
+              <h3 className={styles.OTDProgramHeading}>
+                {track.title[lang]}
+                <span className={styles.OTDProgramSubHeading}>
+                  {track.subtitle[lang]}
+                </span>
+              </h3>
+              {track.sessions.map(OTDProgramBody)}
+            </div>
+          )
+        ])}
       </Col>
     );
 

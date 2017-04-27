@@ -11,7 +11,7 @@ import styles from '../../styles.css';
 
 import AboutData from '../../data/AboutData';
 
-export default class LandingEN extends React.Component {
+export default class LandingEN extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -28,7 +28,7 @@ export default class LandingEN extends React.Component {
     const { tab } = this.state;
     const org = AboutData.organizations[tab];
     const text =
-      <Col md="10" md-offset="1" key={org.key}>
+      <Col md="10" md-offset="1">
         {org.introduction[lang]}
         <h3 className={styles.heading}> MISSION </h3>
         <div className={styles.headingBottom} />

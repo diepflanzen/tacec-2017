@@ -4,17 +4,20 @@ import july2img from '../images/july2.jpg';
 import july3img from '../images/july3.jpg';
 import styles from '../styles.css';
 
+const textStyle = styles.bodyTextOTD
+
 function Paragraph (props) {
-  return <p className={styles.bodyTextOTD}>{props.children}</p>
-}
-function Itemize (props) {
-  return <ul>{props.children.map(item => <li>{item}</li>)}</ul>
+  return <p className={textStyle}>{props.children}</p>
 }
 function Item (props) {
-  return <span className={styles.bodyTextOTD}>{props.children}</span>
+  return <span className={textStyle}>{props.children}</span>
+}
+function Itemize (props) {
+  return <ul>{props.children.map((item, index) => <li key={index}>{item}</li>)}</ul>
 }
 
-// paragraphs need a unique key each
+// 同一個方框框 [ ] 包住的東西每一項必須有獨立的 key.
+// 可以是任何字串，只要同一個方框裡面都不一樣就好。
 const OTDProgramData = Object.freeze({
   otdIntro: {
     en: [
@@ -31,13 +34,13 @@ const OTDProgramData = Object.freeze({
       </Paragraph>
     ],
     zh: [
-      <Paragraph key="p3">
+      <Paragraph key="p1">
         海外台灣青年陣線（Overseas Taiwanese for Democracy），
         <br />
         又稱海台青或 OTD，是後 318 的海外台灣人社運組織。
       </Paragraph>
       ,
-      <Paragraph key="p4">
+      <Paragraph key="p2">
         2017海台青年會結合NGO和g0v黑客松，聚焦在全球化及台美中特殊國際政治下，台灣人在海外所能發揮的影響力。
         <br />
         我們希望利用地利之便，一方面幫助台灣對外抗衡全球化浪潮和區域政治角力，一方面加速台灣內部轉型正義和社會改革的腳步！
@@ -46,32 +49,32 @@ const OTDProgramData = Object.freeze({
   },
   g0vIntro: {
     en: [
-      <Paragraph key="p5">
+      <Paragraph key="p1">
         A 36-hour marathon for open data and data visualization. Meet people with all kinds of skills!
       </Paragraph>
       ,
-      <Paragraph key="p6">
+      <Paragraph key="p2">
         Since its first project in 2012, the g0v communities that aim to transform the government with fully transparent and decentralized framework of culture and technology have demonstrated a new way to combine activism online and offline. Since the introduction of the g0v model to the Taiwanese civil society in the US in 2014, it has brought together hundreds of people in the previous g0v hackathon sessions to create projects of data visualization and open-source softwares that have been influential to the democratic progression in Taiwan. This year, we bring together the g0v hackathon model with local NGOs and social activist groups, such as FAPA and OTD, to produce projects helpful for the Taiwanese society in various ways. If you are a designer, web developer, or have participated in FAPA or other NGOs and social activist groups, please join the hackthon and contribute your experience and talent.
       </Paragraph>
       ,
-      <Paragraph key="p7">
+      <Paragraph key="p3">
         Ask not why nobody is doing this. You are the "nobody", and “nobody” can do everything!
       </Paragraph>
     ],
     zh: [
-      <Paragraph key="p8">
+      <Paragraph key="p1">
         36 小時熱血衝刺，規劃行動方案、開發資訊與資料工具、認識十八般武藝的朋友！
       </Paragraph>
       ,
-      <Paragraph key="p9">
+      <Paragraph key="p2">
         Hackathon 給人的印象就是coding…coding…coding…但參加過 g0v 黑客松的人都知道，程式只是專案的一部份；專案的完成，更仰賴議題的發掘、強大的宣傳、有效率的地面組織戰、或對開放資料做出有影響力的詮釋。廣義來說，社運組織的輿情監控、《圖文不符》的各種懶人包、開放政治獻金的監察院影印部隊，都是不含程式的專案呢！今年，我們想嘗試一個新想法，將 g0v 黑客松的概念帶進美東的 NGO 和社運模式！
       </Paragraph>
       ,
-      <Paragraph key="p10">
+      <Paragraph key="p3">
         不要問為什麼沒有人做這個，先承認你就是「沒有人」，因為「沒有人」是萬能的！
       </Paragraph>
       ,
-      <Itemize key="i1">
+      <Itemize key="p4">
         <Item>
           所有專案初期保持開源，開放，共同協作的模式
         </Item>
