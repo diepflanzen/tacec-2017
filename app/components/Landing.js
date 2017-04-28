@@ -23,7 +23,7 @@ import LandingData from '../data/LandingData'
 export default class Landing extends React.Component {
   render() {
     const langPath = this.props.lang;
-    const lang = langPath ? langPath : "en";
+    const lang = langPath || "en";
     const viewPortWidth = window.innerWidth;
     const isMobile = viewPortWidth < 600;
     const mapCenter = isMobile ? [39.9518694, -75.602182] : [39.9662578,-75.1395344];

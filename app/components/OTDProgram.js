@@ -50,7 +50,7 @@ export default class OTDProgram extends React.PureComponent {
     const viewPortWidth = window.innerWidth;
     const isMobile = viewPortWidth < 600;
 
-    const lang = this.props.lang ? this.props.lang : "zh";
+    const lang = this.props.lang || "zh";
     const { tab } = this.state;
     const OTDSummitText = (
       <Col md="10" md-offset="1">
@@ -140,8 +140,8 @@ export default class OTDProgram extends React.PureComponent {
             {OTDSummitText}
           </Row>
           <Row>
-            <a href="https://g0vus.hackpad.com/2017-g0v--vkwG8i3qu5z" target="_blank">
-              <Button color="primary" className={styles.OTDButton}>專案列表</Button>
+            <a href={OTDProgramData.projectList.link} target="_blank">
+              <Button color="primary" className={styles.OTDButton}>{OTDProgramData.projectList.buttonText[lang]}</Button>
             </a>
             <Button
               color="primary"
@@ -149,7 +149,7 @@ export default class OTDProgram extends React.PureComponent {
               style={{marginLeft: window.innerWidth < 500 ? 0 : 7}}
               onClick={this.handleOpen}
             >
-              補助辦法
+              {OTDProgramData.grantPolicy.buttonText[lang]}
             </Button>
           </Row>
           <Row>
@@ -182,7 +182,7 @@ export default class OTDProgram extends React.PureComponent {
             黑客松貢獻者能獲得交通補助以及 $80 的報名費補助
           </div>
           <div style={{padding: '50px 0px 10px'}}>
-            <div style={{fontSize: 15}}>若您參與的專案有在最後一天的大會中進行成果報告，並且您在專案小組名單上，OTD可提供通交通費以及報名費補助:</div>
+            <div style={{fontSize: 15}}>若您參與的專案有在最後一天的大會中進行成果報告，並且您在專案小組名單上，OTD 可提供通交通費以及報名費補助：</div>
             <div style={{display: 'flex', color: '#64a680'}}>
               <div style={{paddingTop: 10, fontWeight: 'bolder'}}>
                 - 報名費補助:  $</div>

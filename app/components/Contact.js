@@ -12,84 +12,39 @@ import contactImg from '../images/06_Contact_03.jpg';
 import emailIcon from '../images/06_Contact_07-09.png';
 import phoneIcon from '../images/06_Contact_07.png';
 
+import ContactData from '../data/ContactData'
+
 export default class Contact extends React.Component {
   render() {
+    const lang = this.props.lang || "en";
     return (
       <div>
         <div className={styles.aboutImgContainer}><img src={contactImg} alt="Contact icon image" className={styles.aboutImg}/></div>
         <Container className={styles.landingBody}>
-		<Row>
-	          <Col md="10" md-offset="1">
-              <div className={styles.staffCard}>
-                <h3 className={styles.contactHeading}> TACEC <span style={{fontSize: 18, float: 'right'}}>TAIWANESE AMERICAN CONFERENCE / EAST COAST </span></h3>
-                <p className={styles.bodyTextAbout}>
-                  <Col md="4">
-                    <span> Sue-Ching Lin </span>
-                  </Col>
-                  <Col md="4" md-offset="4">
+          <Row>
+          <Col md="10" md-offset="1">
+          {ContactData.contacts.map((section, index) =>
+            <div kep={index} className={styles.staffCard}>
+              <h3 className={styles.contactHeading}>{section.title[lang]}<span style={{fontSize: 18, float: 'right'}}>{section.subtitle[lang]}</span></h3>
+              {section.people.map((person, index) =>
+                <p key={index} className={styles.bodyTextAbout} style={index === 0 ? {} : {paddingTop: 40}}>
+                  <Col md="4"><span>{person.name[lang]}</span></Col>
+                  {person.phone ?
+                    (<Col md="4">
+                      <img src={phoneIcon} width={25} />
+                      <span className={styles.bodyTextAbout} style={{marginLeft: '2%'}}>
+                        703-399-9888
+                      </span>
+                    </Col>)
+                    : []}
+                  <Col md="4" md-offset={person.phone ? 0 : 4}>
                     <img src={emailIcon} width={25} />
                     <span className={styles.bodyTextAbout} style={{marginLeft: '2%'}}>
-                      sclintacec@gmail.com
+                      {person.email}
                     </span>
                   </Col>
-                </p>
-                <p className={styles.bodyTextAbout} style={{paddingTop: 40}}>
-                  <Col md="4">
-                    <span> Minze Chien </span>
-                  </Col>
-                  <Col md="4">
-                    <img src={phoneIcon} width={25} />
-                    <span className={styles.bodyTextAbout} style={{marginLeft: '2%'}}>
-                      703-399-9888
-                    </span>
-                  </Col>
-                  <Col md="4">
-                    <img src={emailIcon} width={25} />
-                    <span className={styles.bodyTextAbout} style={{marginLeft: '2%'}}>
-                      minzechien.tacec@gmail.com
-                    </span>
-                  </Col>
-                </p>
-              </div>
-              <div className={styles.staffCard}>
-                <h3 className={styles.contactHeading}> TANG <span style={{fontSize: 18, float: 'right'}}>TAIWANESE AMERICAN NEXT GENERATION </span></h3>
-	          <p className={styles.bodyTextAbout}>
-                  <Col md="4">
-                    <span> Jenny Kao / Alex Chang </span>
-                  </Col>
-                  <Col md="4" md-offset="4">
-                    <img src={emailIcon} width={25} />
-                    <span className={styles.bodyTextAbout} style={{marginLeft: '2%'}}>
-                      hello@tangeration.org
-                    </span>
-                  </Col>
-                </p>
-              </div>
-              <div className={styles.staffCard}>
-                <h3 className={styles.contactHeading}> OTD <span style={{fontSize: 18, float: 'right'}}>OVERSEAS TAIWANESE FOR DEMOCRACY </span></h3>
-	          <p className={styles.bodyTextAbout}>
-                  <Col md="4">
-                    <span> Yu-Chien Tseng  </span>
-                  </Col>
-                  <Col md="4" md-offset="4">
-                    <img src={emailIcon} width={25} />
-                    <span className={styles.bodyTextAbout} style={{marginLeft: '2%'}}>
-                      crossover317@gmail.com
-                    </span>
-                  </Col>
-                </p>
-                <p className={styles.bodyTextAbout} style={{paddingTop: 40}}>
-                  <Col md="4">
-                    <span> Yen-Ting Liu </span>
-                  </Col>
-                  <Col md="4" md-offset="4">
-                    <img src={emailIcon} width={25} />
-                    <span className={styles.bodyTextAbout} style={{marginLeft: '2%'}}>
-                      edsolitude@gmail.com
-                    </span>
-                  </Col>
-                </p>
-              </div>
+                </p>)}
+            </div>)}
               {/*<div>
                 <h3 className={styles.contactHeading}> LOCAL TAXI </h3>
                 <p className={styles.bodyTextAbout}>

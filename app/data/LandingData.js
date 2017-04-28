@@ -72,7 +72,7 @@ const LandingData = Object.freeze({
     },
     {
       logoImageSource: otdLogo,
-      logoImageAlternativeText: {en: "OTD", zh: "海台青"},
+      logoImageAlternativeText: {en: "OTD", zh: "OTD"},
       logoImageExtraProps: {width: "100%"},
       link: "https://www.facebook.com/overseastaiwanesefordemocracy"
     }

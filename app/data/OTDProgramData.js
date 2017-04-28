@@ -87,6 +87,19 @@ const OTDProgramData = Object.freeze({
       </Itemize>
     ]
   },
+  projectList: {
+    buttonText: {
+      en: "Project Pool",
+      zh: "專案列表",
+    },
+    link: "https://g0vus.hackpad.com/2017-g0v--vkwG8i3qu5z",
+  },
+  grantPolicy: {
+    buttonText: {
+      en: "Reimbursement",
+      zh: "補助辦法",
+    }
+  },
   panelsByDate: [
     {
       dateImageSource: july2img,
