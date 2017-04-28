@@ -76,7 +76,11 @@ const LandingData = Object.freeze({
       logoImageExtraProps: {width: "100%"},
       link: "https://www.facebook.com/overseastaiwanesefordemocracy"
     }
-  ]
+  ],
+  downloadPaperForm: {
+    en: "Download Registration Form",
+    zh: "下載紙本報名表格",
+  }
 });
 
 export default LandingData;
