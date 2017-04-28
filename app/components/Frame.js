@@ -31,7 +31,7 @@ export default class Frame extends React.Component {
   render() {
     const { children } = this.props;
     const langPath = this.props.lang;
-    const lang = langPath ? langPath : "en";
+    const lang = langPath || "en";
     const relPath = getRelPath(langPath, this.props.location.pathname);
     const viewPortWidth = window.innerWidth;
     return (

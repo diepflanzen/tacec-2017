@@ -24,7 +24,7 @@ export default class About extends React.PureComponent {
   }
 
   render() {
-    const lang = this.props.lang ? this.props.lang : "en";
+    const lang = this.props.lang || "en";
     const { tab } = this.state;
     const org = AboutData.organizations[tab];
     const text =
