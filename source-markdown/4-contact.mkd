@@ -67,6 +67,6 @@ Philadelphia International Airport (PHL)
 
 ## Parking
 - (Recommended) Park at D Lot (no overnight parking) first, check in and take luggage to your room, and then move your car to M Lot.
-- [View map](https://drive.google.com/open?id=1--ocbXfGiZbUDHXBOCa1TAvCi3A)
+- [View map](locations.kml)
 
 More information about travel to West Chester Unversity, please click [here](https://www.wcupa.edu/_admissions/sch_adm/visitus.aspx).
