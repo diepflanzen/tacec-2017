@@ -6,12 +6,12 @@ html, body {
 
 @font-face {
    font-family: 'DIN-Condensed';
-   src: url('./images/font/DIN-Condensed-Bold.ttf'); /* Safari, Android, iOS */
+   src: url('./fonts/DIN-Condensed-Bold.ttf'); /* Safari, Android, iOS */
  }
 
  @font-face {
     font-family: 'DIN-Alternate';
-    src: url('./images/font/DIN-Alternate-Bold.ttf'); /* Safari, Android, iOS */
+    src: url('./fonts/DIN-Alternate-Bold.ttf'); /* Safari, Android, iOS */
   }
 
 
