@@ -54,7 +54,7 @@ const OTDProgramData = Object.freeze({
       </Paragraph>
       ,
       <Paragraph key="p2">
-        Since its first project in 2012, the g0v communities that aim to transform the government with fully transparent and decentralized framework of culture and technology have demonstrated a new way to combine activism online and offline. Since the introduction of the g0v model to the Taiwanese civil society in the US in 2014, it has brought together hundreds of people in the previous g0v hackathon sessions to create projects of data visualization and open-source softwares that have been influential to the democratic progression in Taiwan. This year, we bring together the g0v hackathon model with local NGOs and social activist groups, such as FAPA and OTD, to produce projects helpful for the Taiwanese society in various ways. If you are a designer, web developer, or have participated in FAPA or other NGOs and social activist groups, please join the hackthon and contribute your experience and talent.
+        The g0v community aims to transform the government with fully transparent and decentralized framework of culture and technology, and  have demonstrated a new way to combine activism online and offline in Taiwan. Since the introduction of the g0v model to the Taiwanese civil society in the US in 2014, it has brought together hundreds of people in the previous g0v hackathon sessions to create projects of data visualization and open-source softwares that have been influential to the democratic progression in Taiwan. This year, we bring together the g0v hackathon model with local NGOs and social activist groups, such as FAPA and OTD, to produce projects helpful for the Taiwanese society in various ways. If you are a designer, web developer, or have participated in FAPA or other NGOs and social activist groups, please join the hackthon and contribute your experience and talent.
       </Paragraph>
       ,
       <Paragraph key="p3">
@@ -70,11 +70,7 @@ const OTDProgramData = Object.freeze({
         Hackathon 給人的印象就是coding…coding…coding…但參加過 g0v 黑客松的人都知道，程式只是專案的一部份；專案的完成，更仰賴議題的發掘、強大的宣傳、有效率的地面組織戰、或對開放資料做出有影響力的詮釋。廣義來說，社運組織的輿情監控、《圖文不符》的各種懶人包、開放政治獻金的監察院影印部隊，都是不含程式的專案呢！今年，我們想嘗試一個新想法，將 g0v 黑客松的概念帶進美東的 NGO 和社運模式！
       </Paragraph>
       ,
-      <Paragraph key="p3">
-        不要問為什麼沒有人做這個，先承認你就是「沒有人」，因為「沒有人」是萬能的！
-      </Paragraph>
-      ,
-      <Itemize key="p4">
+      <Itemize key="p3">
         <Item>
           所有專案初期保持開源，開放，共同協作的模式
         </Item>
@@ -85,6 +81,10 @@ const OTDProgramData = Object.freeze({
           接力完成過去兩屆美東 g0v 中持續推動的專案
         </Item>
       </Itemize>
+      ,
+      <Paragraph key="p4">
+        不要問為什麼沒有人做這個，先承認你就是「沒有人」，因為「沒有人」是萬能的！
+      </Paragraph>
     ]
   },
   projectList: {
@@ -107,7 +107,7 @@ const OTDProgramData = Object.freeze({
         {
           title: {
             en: 'Take Action in the US',
-            zh: '在美台灣施力點',
+            zh: '在美行動施力點',
           },
           subtitle: {
             en: 'There are certain things that can only be done in the US',
@@ -235,7 +235,7 @@ const OTDProgramData = Object.freeze({
           sessions: [
             {
               title: {
-                en: 'How should the civil society respond to the Taiwan-US relations under the current international military strategy and economic arrangement?',
+                en: 'How should the civil society respond to the Taiwan-US relations?',
                 zh: '如何回應在國際戰略與經貿佈局下的台美中關係',
               },
               time: '14:00 - 14:50',
