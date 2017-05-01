@@ -58,7 +58,7 @@ const OTDProgramData = Object.freeze({
       </Paragraph>
       ,
       <Paragraph key="p3">
-        Ask not why nobody is doing this. You are the "nobody", and “nobody” can do everything!
+        Ask not why nobody is doing this. You are the “nobody”, and “nobody” can do everything!
       </Paragraph>
     ],
     zh: [
