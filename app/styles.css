@@ -429,7 +429,8 @@ li {
 .dlFormButton {
   composes: OTDButton;
   width: 365px;
-  margin-top: 75px;
+  margin-top: 30px;
+  margin-bottom: 60px;
   height: 60px;
   font-size: 16px;
   font-weight: bolder;

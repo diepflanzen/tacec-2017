@@ -64,26 +64,27 @@ export default class Landing extends React.Component {
                   </div>
                 </Link>
               </div>
-	          </Col>
-            <Col md="5">
-              <a href="https://goo.gl/f0fsCf" target="_blank">
-                <Button color="primary" className={styles.dlFormButton}>{LandingData.downloadPaperForm[lang]}</Button>
-              </a>
-            </Col>
-            <Col md="2">
-              <div className={styles.heading} style={{marginTop: 75, fontSize: 21, color: '#333'}}> Or </div>
-            </Col>
-            <Col md="5">
-              <a href="https://tang.regfox.com/tacec-tang-conference-wotd-2017" target="_blank">
-                <Button color="primary" className={styles.dlFormButton} style={isMobile ? {marginTop: 0} : {}}>{LandingData.registerOnline[lang]}</Button>
-              </a>
-            </Col>
-            <Col md="4" md-offset="4">
-              <div className={styles.bodyTextAbout} style={{textAlign: 'center', marginTop: 40}}>
-                {LandingData.deadlines[lang]}
-              </div>
-            </Col>
-          </Row>
+	           </Col>
+            </Row>
+            <Row>
+              <Col md="4" md-offset="4">
+                <div className={styles.bodyTextAbout} style={{textAlign: 'center', marginTop: 90}}>
+                  {LandingData.deadlines[lang]}
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col md="6">
+                <a href="https://goo.gl/f0fsCf" target="_blank">
+                  <Button color="primary" className={styles.dlFormButton}>{LandingData.downloadPaperForm[lang]}</Button>
+                </a>
+              </Col>
+              <Col md="6">
+                <a href="https://tang.regfox.com/tacec-tang-conference-wotd-2017" target="_blank">
+                  <Button color="primary" className={styles.dlFormButton} style={isMobile ? {marginTop: 0} : {}}>{LandingData.registerOnline[lang]}</Button>
+                </a>
+              </Col>
+            </Row>
         </Container>
         {viewPortWidth < 700 && (
         <img
