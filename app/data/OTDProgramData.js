@@ -15,6 +15,9 @@ function Item (props) {
 function Itemize (props) {
   return <ul>{props.children.map((item, index) => <li key={index}>{item}</li>)}</ul>
 }
+function Link (props) {
+  return <a {...props} target="_blank">{props.children}</a>
+}
 
 // 同一個方框框 [ ] 包住的東西每一項必須有獨立的 key.
 // 可以是任何字串，只要同一個方框裡面都不一樣就好。
@@ -54,7 +57,7 @@ const OTDProgramData = Object.freeze({
       </Paragraph>
       ,
       <Paragraph key="p2">
-        The g0v community aims to transform the government with fully transparent and decentralized framework of culture and technology, and  have demonstrated a new way to combine activism online and offline in Taiwan. Since the introduction of the g0v model to the Taiwanese civil society in the US in 2014, it has brought together hundreds of people in the previous g0v hackathon sessions to create projects of data visualization and open-source softwares that have been influential to the democratic progression in Taiwan. This year, we bring together the g0v hackathon model with local NGOs and social activist groups, such as FAPA and OTD, to produce projects helpful for the Taiwanese society in various ways. If you are a designer, web developer, or have participated in FAPA or other NGOs and social activist groups, please join the hackthon and contribute your experience and talent.
+        The <Link href="http://g0v.tw/en-US/about.html">g0v</Link> community aims to transform the government with fully transparent and decentralized framework of culture and technology, and  have demonstrated a new way to combine activism online and offline in Taiwan. Since the introduction of the g0v model to the Taiwanese civil society in the US in 2014, it has brought together hundreds of people in the previous g0v hackathon sessions to create projects of data visualization and open-source softwares that have been influential to the democratic progression in Taiwan. This year, we bring together the g0v hackathon model with local NGOs and social activist groups, such as FAPA and OTD, to produce projects helpful for the Taiwanese society in various ways. If you are a designer, web developer, or have participated in FAPA or other NGOs and social activist groups, please join the hackthon and contribute your experience and talent.
       </Paragraph>
       ,
       <Paragraph key="p3">
@@ -67,7 +70,7 @@ const OTDProgramData = Object.freeze({
       </Paragraph>
       ,
       <Paragraph key="p2">
-        Hackathon 給人的印象就是coding…coding…coding…但參加過 g0v 黑客松的人都知道，程式只是專案的一部份；專案的完成，更仰賴議題的發掘、強大的宣傳、有效率的地面組織戰、或對開放資料做出有影響力的詮釋。廣義來說，社運組織的輿情監控、《圖文不符》的各種懶人包、開放政治獻金的監察院影印部隊，都是不含程式的專案呢！今年，我們想嘗試一個新想法，將 g0v 黑客松的概念帶進美東的 NGO 和社運模式！
+        Hackathon 給人的印象就是coding…coding…coding…但參加過 g0v 黑客松的人都知道，程式只是專案的一部份；專案的完成，更仰賴議題的發掘、強大的宣傳、有效率的地面組織戰、或對開放資料做出有影響力的詮釋。廣義來說，社運組織的輿情監控、<Link href="https://www.facebook.com/simpleinfo">《圖文不符》</Link>的各種懶人包、開放政治獻金的監察院影印部隊，都是不含程式的專案呢！今年，我們想嘗試一個新想法，將 g0v 黑客松的概念帶進美東的 NGO 和社運模式！
       </Paragraph>
       ,
       <Itemize key="p3">
