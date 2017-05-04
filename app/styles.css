@@ -302,7 +302,8 @@ li {
   font-size: 18px;
   border-width: 3px;
   line-height: initial;
-  letter-spacing: 3px;
+  letter-spacing: 0.03em;
+  font-family: 'DIN-Alternate';
 }
 
 .otdImg {

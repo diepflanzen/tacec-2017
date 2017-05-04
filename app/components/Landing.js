@@ -75,10 +75,10 @@ export default class Landing extends React.Component {
             </Row>
             <Row>
               <a href="https://goo.gl/f0fsCf" target="_blank">
-                <Button color="primary" className={styles.OTDButton} style={{fontSize: 14}}>{LandingData.downloadPaperForm[lang]}</Button>
+                <Button color="primary" className={styles.OTDButton} style={{fontSize: 15}}>{LandingData.downloadPaperForm[lang]}</Button>
               </a>
               <a href="https://tang.regfox.com/tacec-tang-conference-wotd-2017" target="_blank">
-                <Button color="primary" className={styles.OTDButton} style={{fontSize: 14}}>{LandingData.registerOnline[lang]}</Button>
+                <Button color="primary" className={styles.OTDButton} style={{fontSize: 15}}>{LandingData.registerOnline[lang]}</Button>
               </a>
             </Row>
         </Container>
