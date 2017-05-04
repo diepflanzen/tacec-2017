@@ -74,16 +74,12 @@ export default class Landing extends React.Component {
               </Col>
             </Row>
             <Row>
-              <Col md="6">
-                <a href="https://goo.gl/f0fsCf" target="_blank">
-                  <Button color="primary" className={styles.dlFormButton}>{LandingData.downloadPaperForm[lang]}</Button>
-                </a>
-              </Col>
-              <Col md="6">
-                <a href="https://tang.regfox.com/tacec-tang-conference-wotd-2017" target="_blank">
-                  <Button color="primary" className={styles.dlFormButton} style={isMobile ? {marginTop: 0} : {}}>{LandingData.registerOnline[lang]}</Button>
-                </a>
-              </Col>
+              <a href="https://goo.gl/f0fsCf" target="_blank">
+                <Button color="primary" className={styles.OTDButton} style={{fontSize: 14}}>{LandingData.downloadPaperForm[lang]}</Button>
+              </a>
+              <a href="https://tang.regfox.com/tacec-tang-conference-wotd-2017" target="_blank">
+                <Button color="primary" className={styles.OTDButton} style={{fontSize: 14}}>{LandingData.registerOnline[lang]}</Button>
+              </a>
             </Row>
         </Container>
         {viewPortWidth < 700 && (

@@ -78,8 +78,8 @@ const LandingData = Object.freeze({
     }
   ],
   downloadPaperForm: {
-    en: "Download Registration Form",
-    zh: "下載紙本報名表格",
+    en: "Download Form",
+    zh: "下載報名表格",
   },
   registerOnline: {
     en: "Register Online",
