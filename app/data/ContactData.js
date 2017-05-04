@@ -45,7 +45,7 @@ const ContactData = Object.freeze({
           },
           {
             name: {en: "Sue-Ching Lin", zh: "Sue-Ching Lin"},
-            note: "(Registration only)",
+            note: {en: "(Registration only)", zh: "（註冊事宜）"},
             email: "sclintacec@gmail.com",
           }
         ],
@@ -58,7 +58,7 @@ const ContactData = Object.freeze({
         },
         people: [
           {
-            name: {en: "Jenn Kao or Alex Chang", zh: "Jenn Kao or Alex Chang"},
+            name: {en: "Jenn Kao or Alex Chang", zh: "Jenn Kao 或 Alex Chang"},
             email: "hello@tangeneration.org",
           },
         ],
