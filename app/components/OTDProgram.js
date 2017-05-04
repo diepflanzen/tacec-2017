@@ -20,7 +20,7 @@ import minusSign from '../images/minusSign.jpg';
 import carImg from '../images/car.jpg';
 import planeImg from '../images/plane.jpg';
 
-import OTDProgramData from '../data/OTDProgramData';
+import OTDProgramData, {isMobile} from '../data/OTDProgramData';
 
 export default class OTDProgram extends React.PureComponent {
   constructor(props) {
@@ -47,9 +47,6 @@ export default class OTDProgram extends React.PureComponent {
   };
 
   render() {
-    const viewPortWidth = window.innerWidth;
-    const isMobile = viewPortWidth < 600;
-
     const lang = this.props.lang || "zh";
     const { tab } = this.state;
     const OTDSummitText = (
@@ -163,7 +160,7 @@ export default class OTDProgram extends React.PureComponent {
           </a>
         </div>
         <Dialog
-          title="報名費與補助"
+          title={OTDProgramData.grantPolicy.dialogue.title[lang]}
           titleStyle={subsidyDialogTitleStyle}
           bodyStyle={subsidyDialogBodyStyle}
           modal={false}
@@ -171,41 +168,24 @@ export default class OTDProgram extends React.PureComponent {
           onRequestClose={this.handleClose}
           autoScrollBodyContent={true}
         >
-          <div style={{display: 'flex', color: '#64a680'}}>
-            <div style={{paddingTop: 10, paddingLeft: 10, fontWeight: 'bolder'}}>早鳥  $</div>
-            <div style={{fontSize: 33, paddingTop: isMobile ? 18 : 0}}>180</div>
-            <div style={{fontSize: 12, paddingTop: 25, paddingLeft: 5, color: '#777'}}> (5/15 之前）</div>
-            <div style={{paddingTop: 10, paddingLeft: 10, fontWeight: 'bolder'}}>一般  $</div>
-            <div style={{fontSize: 33, paddingTop: isMobile ? 18 : 0}}>190 </div>
-          </div>
+          {OTDProgramData.grantPolicy.dialogue.feeBox[lang]}
           <div style={{width: '100%', borderBottom: '3px solid #17906a', padding: '10px 0px 10px', fontSize: 12}}>
-            黑客松貢獻者能獲得交通補助以及 $80 的報名費補助
+            {OTDProgramData.grantPolicy.dialogue.feeFootnote[lang]}
           </div>
           <div style={{padding: '50px 0px 10px'}}>
-            <div style={{fontSize: 15}}>若您參與的專案有在最後一天的大會中進行成果報告，並且您在專案小組名單上，OTD 可提供通交通費以及報名費補助：</div>
-            <div style={{display: 'flex', color: '#64a680'}}>
-              <div style={{paddingTop: 10, fontWeight: 'bolder'}}>
-                - 報名費補助:  $</div>
-              <div style={{fontSize: 33}}>80</div>
-            </div>
+            <div style={{fontSize: 15}}>{OTDProgramData.grantPolicy.dialogue.grantText[lang]}</div>
+            {OTDProgramData.grantPolicy.dialogue.feeGrantBox[lang]}
             <div style={{marginBottom: 25, color: '#64a680', fontWeight: 'bolder'}}>
-              - 旅遊補助 (以下擇一):
+              {OTDProgramData.grantPolicy.dialogue.travelGrantText[lang]}
             </div>
             <div className={styles.popupBoxContainer}>
               <div className={styles.popupBox} style={isMobile ? {borderBottom: 'none'} : {borderRight: 'none'}}>
                 <img src={carImg} style={{marginLeft: '25%'}}/>
-                <p style={{fontSize: 12, marginTop: 25}}>
-                  開車：每車每英哩補助 $0.50, 最高 $100
-                </p>
+                {OTDProgramData.grantPolicy.dialogue.drivingTravelGrantBox[lang]}
               </div>
               <div className={styles.popupBox}>
                 <img src={planeImg} style={{marginLeft: '25%'}}/>
-                <p style={{fontSize: 12, marginTop: 25}}>
-                  飛機,火車及公車 (皆為實報實銷)：<br/>
-                  - 東岸時區：最高 $100 <br/>
-                  - 中部時區: 最高 $200 <br/>
-                  - 西岸時區 (包含山區時區): 最高 $300
-                </p>
+                {OTDProgramData.grantPolicy.dialogue.airborneTravelGrantBox[lang]}
               </div>
             </div>
           </div>
