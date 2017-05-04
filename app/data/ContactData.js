@@ -35,7 +35,7 @@ const ContactData = Object.freeze({
         title: {en: "TACEC", zh: "TACEC"},
         subtitle: {
           en: "TAIWANESE AMERICAN CONFERENCE / EAST COAST",
-          zh: "TAIWANESE AMERICAN CONFERENCE / EAST COAST",
+          zh: "美東台灣人夏令會",
         },
         people: [
           {
@@ -54,7 +54,7 @@ const ContactData = Object.freeze({
         title: {en: "TANG", zh: "TANG"},
         subtitle: {
           en: "TAIWANESE AMERICAN NEXT GENERATION",
-          zh: "TAIWANESE AMERICAN NEXT GENERATION",
+          zh: "新生代臺美人協會",
         },
         people: [
           {
