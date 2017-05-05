@@ -96,7 +96,7 @@ export default class Landing extends React.Component {
              bootstrapURLKeys={{key: 'AIzaSyDeZuJsUlNfaMcKn0JBHDfMl2TzALkPwUk'}}
              defaultCenter={mapCenter}
              defaultZoom={10}
-             options={{zoomControl: false, scrollwheel: false, scaleControl: false, disableDoubleClickZoom: true}}
+             options={{draggable: false, zoomControl: false, scrollwheel: false, scaleControl: false, disableDoubleClickZoom: true}}
              disableDefaultUI={true}
            >
              <div
