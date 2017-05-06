@@ -216,7 +216,7 @@ const OTDProgramData = Object.freeze({
               time: '14:00 - 14:50',
               speakers: {
                 en: 'Chiachieh Tang | Yen-Ting Edward Liu | Ho-Chou Tu',
-                zh: '唐家婕 | 劉彥廷 | XXX',
+                zh: '唐家婕 | 劉彥廷 | 杜荷洲',
               },
               description: {
                 en: 'The American media often contains false information and misguided reports about Taiwan. Very often the media has reinforced the notion of Taiwan as a state that broke off from China due to the civil wars and represented Taiwan as the source of the cross-strait conflicts. The national identity of Taiwanese people and the continuous threats against Taiwan’s sovereignty from China are neglected in the mainstream discourses. This type of narrative has created obstacles for Americans to understand the actual relationship between Taiwan and China and prevented them from supporting Taiwan. This panel will discuss the political issues behind the misrepresentations of Taiwan in American media, and brainstormed on ways to intervene these mainstream representations through grassroots media relation building.',
