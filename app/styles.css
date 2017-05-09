@@ -791,9 +791,27 @@ li {
   background-color: rgb(65, 138, 107);
 }
 
+.tabCategoryProgram {
+  composes: tabCategory;
+}
+
+.tabCategoryProgramLeft {
+  composes: tabCategoryLeft;
+}
+
+
 @media (max-width: 800px) {
   .tabCategoryLeft {
     margin-left: 0;
+  }
+
+  .tabCategoryProgramLeft {
+    margin-left: 0;
+    width: 85px;
+  }
+
+  .tabCategoryProgram {
+    width: 85px;
   }
 }
 

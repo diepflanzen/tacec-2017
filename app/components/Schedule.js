@@ -6,7 +6,7 @@ import Container from 'muicss/lib/react/container';
 import Divider from 'muicss/lib/react/divider';
 import Row from 'muicss/lib/react/row';
 import Col from 'muicss/lib/react/col';
-
+import { Link } from 'react-router';
 import styles from '../styles.css';
 import programImg from '../images/03_Program2_03.png';
 
@@ -213,18 +213,23 @@ export default class Schedule extends React.Component {
       <div>
         <div className={styles.aboutImgContainer}><img src={programImg} alt="Program icon image" className={styles.aboutImg}/></div>
         <div className={styles.tabBand}>
-          <div className={tab === 0 ? styles.tabCategoryLeftActive : styles.tabCategoryLeft} onClick={() => this.tabClick(0)}>
+          <div className={tab === 0 ? styles.tabCategoryLeftActive : styles.tabCategoryProgramLeft} onClick={() => this.tabClick(0)}>
             JULY 1, SAT
           </div>
-          <div className={tab === 1 ? styles.tabCategoryActive : styles.tabCategory} onClick={() => this.tabClick(1)}>
+          <div className={tab === 1 ? styles.tabCategoryActive : styles.tabCategoryProgram} onClick={() => this.tabClick(1)}>
             JULY 2, SUN
           </div>
-          <div className={tab === 2 ? styles.tabCategoryActive : styles.tabCategory} onClick={() => this.tabClick(2)}>
+          <div className={tab === 2 ? styles.tabCategoryActive : styles.tabCategoryProgram} onClick={() => this.tabClick(2)}>
             JULY 3, MON
           </div>
-          <div className={tab === 3 ? styles.tabCategoryActive : styles.tabCategory} onClick={() => this.tabClick(3)}>
+          <div className={tab === 3 ? styles.tabCategoryActive : styles.tabCategoryProgram} onClick={() => this.tabClick(3)}>
             JULY 4, TUE
           </div>
+          <Link to="/otd">
+            <div className={styles.tabCategoryProgram}>
+              OTD
+            </div>
+          </Link>
         </div>
         <Container className={styles.landingBody}>
 		<Row>
