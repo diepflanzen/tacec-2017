@@ -4,6 +4,11 @@ import july2img from '../images/july2.jpg';
 import july3img from '../images/july3.jpg';
 import styles from '../styles.css';
 
+// Minimum style setup for the data
+
+const viewPortWidth = window.innerWidth;
+const isMobile = viewPortWidth < 600;
+
 const textStyle = styles.bodyTextOTD
 
 function Paragraph (props) {
@@ -17,6 +22,30 @@ function Itemize (props) {
 }
 function Link (props) {
   return <a {...props} target="_blank">{props.children}</a>
+}
+function FeeBox (props) {
+  return <div {...props} style={{display: 'flex', color: '#64a680'}}>{props.children}</div>
+}
+function FeeText (props) {
+  return <div {...props} style={{paddingTop: 10, paddingLeft: 10, fontWeight: 'bolder'}}>{props.children}</div>
+}
+function FeeNum (props) {
+  return <div {...props} style={{fontSize: 33, paddingTop: isMobile ? 18 : 0}}>{props.children}</div>
+}
+function FeeNote (props) {
+  return <div {...props} style={{fontSize: 12, paddingTop: 25, color: '#777'}}>{props.children}</div>
+}
+function FeeGrantBox (props) {
+  return <div {...props} style={{display: 'flex', color: '#64a680'}}>{props.children}</div>
+}
+function FeeGrantText (props) {
+  return <div {...props} style={{paddingTop: 10, fontWeight: 'bolder'}}>{props.children}</div>
+}
+function FeeGrantNum (props) {
+  return <div {...props} style={{fontSize: 33}}>{props.children}</div>
+}
+function TravelGrantDetailBox (props) {
+  return <p {...props} style={{fontSize: 12, marginTop: 25}}>{props.children}</p>
 }
 
 // 同一個方框框 [ ] 包住的東西每一項必須有獨立的 key.
@@ -101,7 +130,69 @@ const OTDProgramData = Object.freeze({
     buttonText: {
       en: "Reimbursement",
       zh: "補助辦法",
-    }
+    },
+    dialogue: {
+      title: {
+        en: "Fee and Reimbursement",
+        zh: "報名費與補助",
+      },
+      feeBox: {
+        en: <FeeBox>
+              <FeeText>Early bird  $</FeeText><FeeNum>180</FeeNum><FeeNote>(before 5/15)</FeeNote>
+              <FeeText>Regular  $</FeeText><FeeNum>190</FeeNum>
+            </FeeBox>,
+        zh: <FeeBox>
+              <FeeText>早鳥  $</FeeText><FeeNum>180</FeeNum><FeeNote>（5/15 之前）</FeeNote>
+              <FeeText>一般  $</FeeText><FeeNum>190</FeeNum>
+            </FeeBox>,
+      },
+      feeFootnote: {
+        en : "Contributors of the hackathon are eligible for reimbursement of registration fee and travel.",
+        zh : "黑客松貢獻者能獲得交通補助以及 $80 的報名費補助",
+      },
+      grantText: {
+        en: "If your name appears on the contributor list of any of the projects, OTD provides registration and travel reimbursements:",
+        zh: "若您參與的專案有在最後一天的大會中進行成果報告，並且您在專案小組名單上，OTD 可提供通交通費以及報名費補助：",
+      },
+      feeGrantBox: {
+        en: <FeeGrantBox>
+              <FeeGrantText>- Registration fee reimbursement:  $</FeeGrantText><FeeGrantNum>80</FeeGrantNum>
+            </FeeGrantBox>,
+        zh: <FeeGrantBox>
+              <FeeGrantText>- 報名費補助  $</FeeGrantText><FeeGrantNum>80</FeeGrantNum>
+            </FeeGrantBox>,
+      },
+      travelGrantText: {
+        en: "- Travel reimbursement (choose one):",
+        zh: "- 旅遊補助（以下擇一）",
+      },
+      drivingTravelGrantBox: {
+        en:
+          <TravelGrantDetailBox>
+            By car: $0.50 per car per mile, $100 max.
+          </TravelGrantDetailBox>,
+        zh:
+          <TravelGrantDetailBox>
+            開車：每車每英哩補助 $0.50, 最高 $100
+          </TravelGrantDetailBox>,
+      },
+      airborneTravelGrantBox: {
+        en:
+          <TravelGrantDetailBox>
+            By air, train, or bus (with receipt):<br/>
+            - Eastern timezone: $100 max<br/>
+            - Central timezone: $200 max<br/>
+            - Pacific/Mountain timezones: $300 max
+          </TravelGrantDetailBox>,
+        zh:
+          <TravelGrantDetailBox>
+            飛機,火車及公車 (皆為實報實銷)：<br/>
+            - 東岸時區：最高 $100 <br/>
+            - 中部時區: 最高 $200 <br/>
+            - 西岸時區 (包含山區時區): 最高 $300
+          </TravelGrantDetailBox>,
+      },
+    },
   },
   panelsByDate: [
     {
@@ -125,7 +216,7 @@ const OTDProgramData = Object.freeze({
               time: '14:00 - 14:50',
               speakers: {
                 en: 'Chiachieh Tang | Yen-Ting Edward Liu | Ho-Chou Tu',
-                zh: '唐家婕 | 劉彥廷 | XXX',
+                zh: '唐家婕 | 劉彥廷 | 杜荷洲',
               },
               description: {
                 en: 'The American media often contains false information and misguided reports about Taiwan. Very often the media has reinforced the notion of Taiwan as a state that broke off from China due to the civil wars and represented Taiwan as the source of the cross-strait conflicts. The national identity of Taiwanese people and the continuous threats against Taiwan’s sovereignty from China are neglected in the mainstream discourses. This type of narrative has created obstacles for Americans to understand the actual relationship between Taiwan and China and prevented them from supporting Taiwan. This panel will discuss the political issues behind the misrepresentations of Taiwan in American media, and brainstormed on ways to intervene these mainstream representations through grassroots media relation building.',
