@@ -138,7 +138,7 @@ const OTDProgramData = Object.freeze({
       },
       feeBox: {
         en: <FeeBox>
-              <FeeText>Early bird  $</FeeText><FeeNum>180</FeeNum><FeeNote>(before 5/15)</FeeNote>
+              <FeeText>Early bird  $</FeeText><FeeNum>180</FeeNum><FeeNote>&nbsp;(before 5/15)</FeeNote>
               <FeeText>Regular  $</FeeText><FeeNum>190</FeeNum>
             </FeeBox>,
         zh: <FeeBox>
@@ -180,9 +180,9 @@ const OTDProgramData = Object.freeze({
         en:
           <TravelGrantDetailBox>
             By air, train, or bus (with receipt):<br/>
-            - Eastern timezone: $100 max<br/>
-            - Central timezone: $200 max<br/>
-            - Pacific/Mountain timezones: $300 max
+            - Eastern timezone: $100 max.<br/>
+            - Central timezone: $200 max.<br/>
+            - Pacific/Mountain timezones: $300 max.
           </TravelGrantDetailBox>,
         zh:
           <TravelGrantDetailBox>
