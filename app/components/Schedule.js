@@ -10,6 +10,7 @@ import { Link } from 'react-router';
 import styles from '../styles.css';
 import programImg from '../images/03_Program2_03.png';
 
+import { toAbsPath } from '../utils'
 
 export default class Schedule extends React.Component {
   constructor(props) {
@@ -24,6 +25,8 @@ export default class Schedule extends React.Component {
   }
 
   render() {
+    const langPath = this.props.lang;
+    const lang = langPath || "en";
     const { tab } = this.state;
 
     const July1Schedule = (
@@ -225,7 +228,7 @@ export default class Schedule extends React.Component {
           <div className={tab === 3 ? styles.tabCategoryActive : styles.tabCategoryProgram} onClick={() => this.tabClick(3)}>
             JULY 4, TUE
           </div>
-          <Link to="/otd">
+          <Link to={toAbsPath(langPath, "otd")}>
             <div className={styles.tabCategoryProgram}>
               OTD
             </div>
