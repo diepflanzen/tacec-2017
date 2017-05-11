@@ -72,7 +72,6 @@ export default class OTDProgram extends React.PureComponent {
       letterSpacing: 0.5
     };
 
-    // all arguments are strings
     const OTDProgramBody = ({title, time, speakers, description}, index) => {
       const { openedTitle } = this.state;
       const amIClicked = openedTitle === title;
