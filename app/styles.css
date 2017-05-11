@@ -275,6 +275,7 @@ li {
 
 .OTDProgramSpeakers {
   float: right;
+  text-align: right;
 }
 
 .OTDPlusSign {
@@ -288,12 +289,14 @@ li {
   color: #64a680;
   font-size: 16px;
   font-weight: bolder;
+  text-align: left;
 }
 
 .OTDProgramDetails {
   background-color: rgb(234, 235, 236);
   overflow: hidden;
-  width: 100%
+  width: 100%;
+  text-align: left;
 }
 
 .OTDButton {
