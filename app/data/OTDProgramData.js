@@ -219,7 +219,7 @@ const OTDProgramData = Object.freeze({
                 zh: '唐家婕 | 劉彥廷 | 杜荷洲',
               },
               description: {
-                en: 'The American media often contains false information and misguided reports about Taiwan. Very often the media has reinforced the notion of Taiwan as a state that broke off from China due to the civil wars and represented Taiwan as the source of the cross-strait conflicts. This type of narrative has created obstacles for Americans to understand the actual relationship between Taiwan and China and prevented them from supporting Taiwan. This panel will discuss the political issues behind the misrepresentations of Taiwan in American media, and brainstormed on ways to intervene these mainstream representations through grassroots media relation building.',
+                en: 'The American media often contains false information and misguided reports about Taiwan, creating obstacles for Americans to understand the actual relationship between Taiwan and China and prevented them from supporting Taiwan. This panel will discuss the political issues behind the misrepresentations of Taiwan in American media, and brainstormed on ways to intervene these mainstream representations through grassroots media relation building.',
                 zh: '美國媒體對台灣的報導常常充滿誤解，不少報導呈現出的台灣印象停留在台灣是中國內戰後分離的政權，並且認為台灣才是威脅兩岸和平的因子。台灣人民真正的國族認同，以及中國對台灣的打壓威脅常常被忽略。這樣的報導敘事有礙美國人真正了解台美中關係，並支持台灣。本場 Panel 將討論美國媒體報導台灣的模式以及背後的政治原因，並且從草根組織媒體關係經營的角度討論相應之道。',
               },
             },
@@ -276,7 +276,7 @@ const OTDProgramData = Object.freeze({
                 zh: '蕭新晟',
               },
               description: {
-                en: 'Since 2012 the first hackathon intiated the project of “Government Budget Visualization” and the various “hacker” activities around the 318 Sunflower Movement, the anarchist style of g0v has created a new kind of organizational building model that reached tens and thousands of netizens. From the East Coast g0v community to the DC hackathon, NJ hackathon, and NY hackathon to the OTD hackathon, how do projects of various scales and sizes create social impacts for the Taiwanese society across the ocean without the “real presence” of any person?',
+                en: 'Since 2012, the anarchist style of g0v community has created a new kind of organizational building model that reached tens and thousands of netizens and created projects that makes civic participation easier. From the East Coast g0v community to the DC hackathon, NJ hackathon, and NY hackathon to the OTD hackathon, how do projects of various scales and sizes create social impacts for the Taiwanese society across the ocean without the “real presence” of any person?',
                 zh: '從 2012 年第一個黑客松做出「中央政府預算視覺化」、到 318 後大松小松落玉盤的空前盛況，g0v 的無政府經營模式到底用了什麼樣的魔力召喚出神通廣大的鄉民？而美東的 g0v 社群從華府黑客松、紐澤西黑客松、紐約黑客松、到這次海台青社運松，各種美東土生土長的大小型專案又如何讓遠在海外的「沒有人」跨海對台灣社會改革作出驚人的貢獻呢？',
               },
             },
@@ -291,7 +291,7 @@ const OTDProgramData = Object.freeze({
                 zh: '鍾佳君 | 徐歆惠 | 邱澗庚',
               },
               description: {
-                en: 'Often we ask people what is your “awakening moment” for political activism? Most people’s answers are participating in an event or a lecture. The persistence in building local organizations, issue awareness, and social networks is the necessary ground work of political activism. However, activist organizations often face issues of lacking idea inspiration or lacking resources to continue the operation. This panel aims to create a platform for local organizers to share ideas of creating sustainable organizations and large-scale solidarity action building for future activities. ',
+                en: 'The persistence in building local organizations, issue awareness, and social networks is the necessary ground work of political activism. However, activist organizations often face issues of lacking idea inspiration or lacking resources to continue the operation. This panel aims to create a platform for local organizers to share ideas of creating sustainable organizations and large-scale solidarity action building for future activities. ',
                 zh: '常常我們會問，你的社運「啟蒙」是什麼？得到的答案往往是因為朋友圈，或是參加了某次活動聽了某場演講。持續在地扎根的組織培力、議題關注、以及人脈網絡的建立都是必須的。但在承平時期，社運組織常常面臨靈感或資源不足等各種組織經營問題。這場 Panel 除了希望能藉由組織交流，讓各地潛在組織者找到長久經營的模式，也分享幾次大型串連活動的經驗，為之後可能的串連行動鋪路。',
               },
             },
