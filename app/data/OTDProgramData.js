@@ -215,8 +215,8 @@ const OTDProgramData = Object.freeze({
               },
               time: '14:00 - 14:50',
               speakers: {
-                en: 'Chiachieh Tang | Yen-Ting Edward Liu | Ho-Chou Tu',
-                zh: '唐家婕 | 劉彥廷 | 杜荷洲',
+                en: 'Yen-Ting Edward Liu | Ho-Chou Tu',
+                zh: '劉彥廷 | 杜荷洲',
               },
               description: {
                 en: 'The American media often contains false information and misguided reports about Taiwan, creating obstacles for Americans to understand the actual relationship between Taiwan and China and prevented them from supporting Taiwan. This panel will discuss the political issues behind the misrepresentations of Taiwan in American media, and brainstormed on ways to intervene these mainstream representations through grassroots media relation building.',
