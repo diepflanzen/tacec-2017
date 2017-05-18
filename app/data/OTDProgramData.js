@@ -245,8 +245,8 @@ const OTDProgramData = Object.freeze({
               },
               time: '16:00 - 16:50',
               speakers: {
-                en: 'Ciwang Teyra | Lee Tzu-Tung',
-                zh: 'Ciwang Teyra | 李紫彤',
+                en: 'Ciwang Teyra | Lee Tzu-Tung | Jennifer Lu',
+                zh: 'Ciwang Teyra | 李紫彤 | 呂欣潔',
               },
               description: {
                 en: 'Besides the nation-state diplomatic relationship between the R.O.C. and the US government, NGOs are also building coalitions and alliances over various types of global issues. This panel will discuss how civil societies and NGOs can create international advocacy work through the cases of indigenous rights and LGBTQ rights to improve the lives and human rights of diverse communities.',
