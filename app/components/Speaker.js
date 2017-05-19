@@ -21,7 +21,7 @@ export default class Speaker extends React.Component {
 	          <Col md="10" md-offset="1">
               <div style={{height: 500}}>
 	          <p className={styles.bodyTextAbout}>
-                  TACEC speaker details are coming soon!
+                  TAC/EC speaker details are coming soon!
                 </p>
               </div>
 	          </Col>

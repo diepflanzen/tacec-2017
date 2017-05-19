@@ -11,6 +11,7 @@ import styles from '../styles.css';
 import contactImg from '../images/06_Contact_03.jpg';
 import emailIcon from '../images/06_Contact_07-09.png';
 import phoneIcon from '../images/06_Contact_07.png';
+import trafficInfo from '../images/traffic.png';
 
 import ContactData from '../data/ContactData'
 
@@ -24,7 +25,7 @@ export default class Contact extends React.Component {
           <Row>
           <Col md="10" md-offset="1">
           {ContactData.contacts.map((section, index) =>
-            <div kep={index} className={styles.staffCard}>
+            <div key={index} className={styles.staffCard}>
               <h3 className={styles.contactHeading}>{section.title[lang]}<span style={{fontSize: 18, float: 'right'}}>{section.subtitle[lang]}</span></h3>
               {section.people.map((person, index) =>
                 <p key={index} className={styles.bodyTextAbout} style={index === 0 ? {} : {paddingTop: 40}}>
@@ -81,6 +82,14 @@ export default class Contact extends React.Component {
                 </p>
               </div>*/}
 	          </Col>
+          </Row>
+          <Row>
+            <Col md="10" md-offset="1">
+              <div className={styles.staffCard} style={{marginTop: 90}}>
+                <h3 className={styles.contactHeading}>{lang === 'en' ? 'Transportation' : '交通資訊' }</h3>
+                <img src={trafficInfo} width="100%" />
+              </div>
+            </Col>
           </Row>
         </Container>
         <div style={{height: 150, width: '100%', backgroundColor: '#64a680'}}>
