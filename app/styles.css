@@ -546,9 +546,66 @@ li {
   margin-bottom: 30px;
 }
 
+/* Speaker Img */
+
 .speakerImg {
   height: 300px;
   background-color: #444;
+}
+
+.speakerImgLiu {
+  composes: speakerImg;
+  background: url('./data/speaker-profile/Liu.jpg') no-repeat center center;
+}
+
+.speakerImgWu {
+  composes: speakerImg;
+  background: url('./data/speaker-profile/Wu.jpg') no-repeat center center;
+}
+
+.speakerImgHsu {
+  composes: speakerImg;
+  background: url('./data/speaker-profile/Hsu.jpg') no-repeat center center;
+}
+
+.speakerImgDu {
+  composes: speakerImg;
+  background: url('./data/speaker-profile/Du.jpg') no-repeat center center;
+}
+
+.speakerImgLinMY {
+  composes: speakerImg;
+  background: url('./data/speaker-profile/LinMY.jpg') no-repeat center center;
+}
+
+.speakerImgLinYJ {
+  composes: speakerImg;
+  background: url('./data/speaker-profile/LinYJ.jpg') no-repeat center center;
+}
+
+.speakerImgMiao {
+  composes: speakerImg;
+  background: url('./data/speaker-profile/Miao.jpg') no-repeat center center;
+}
+
+.speakerImgHsiao {
+  composes: speakerImg;
+  background: url('./data/speaker-profile/Hsiao.jpg') no-repeat center center;
+}
+
+.speakerImgChiu {
+  composes: speakerImg;
+  background: url('./data/speaker-profile/Chiu.jpg') no-repeat center center;
+}
+
+.speakerImgChong {
+  composes: speakerImg;
+  background: url('./data/speaker-profile/Chong.jpg') no-repeat center center;
+}
+
+.speakerImgChen {
+  composes: speakerImg;
+  background: url('./data/speaker-profile/Chen.jpg') no-repeat center center;
 }
 
 .speakerInfo {
