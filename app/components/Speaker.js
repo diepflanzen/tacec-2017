@@ -13,19 +13,19 @@ import speakerData from '../data/SpeakerData';
 
 export default class Speaker extends React.Component {
   render() {
-
-    const speakerBlock = (speaker) => (
-      <div>
+    const lang = this.props.lang || "zh";
+    const speakerBlock = (speaker,i) => (
+      <div key={i}>
           <Row className={styles.speakerBio}>
             <Col lg="2" lg-offset="2" md="2" md-offset="5" xs="6" xs-offset="3">
               <div className={styles[`speakerImg${speaker.uid}`] + ' ' + styles.speakerAvatar} />
             </Col>
             <Col lg="6" lg-offset="0" md="8" md-offset="2" xs="12" className={styles.speakerDetail}>
-              <h3 className={styles.speakerTitle}>{speaker.name.zh}</h3>
-              <h4 className={styles.speakerSubtitle}>{speaker.affiliation.zh}</h4>
-              <p className={styles.staffCardBodyText}>
-                {speaker.intro.zh}
-               </p>
+              <h3 className={styles.speakerTitle}>{speaker.name[lang]}</h3>
+              <h4 className={styles.speakerSubtitle}>{speaker.affiliation[lang]}</h4>
+              {speaker.intro[lang].map((str,i) =>
+                <p key={i} className={styles.staffCardBodyText}>{str}</p>
+              )}
             </Col>
           </Row>
           <Row>
@@ -42,7 +42,7 @@ export default class Speaker extends React.Component {
         <Container className={styles.landingBody}>
 	        <Row>
 	          <Col md="10" md-offset="1">
-              {speakerData.speakers.map(speaker => speakerBlock(speaker))}
+              {speakerData.speakers.map((speaker,i) => speakerBlock(speaker,i))}
 	          </Col>
           </Row>
         </Container>

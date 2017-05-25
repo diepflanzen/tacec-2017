@@ -698,7 +698,11 @@ li {
 
 .staffCard {
   padding-bottom: 23px;
-  border-bottom: 1px solid rgba(0,0,0,.12)
+  border-bottom: 1px solid rgba(0,0,0,.12);
+}
+
+.staffCardBodyText {
+  text-align: left;
 }
 
 .staffCardHeading {
