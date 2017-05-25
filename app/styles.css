@@ -553,6 +553,10 @@ li {
   background-color: #444;
 }
 
+.speakerDetail {
+  margin-left: 80px;
+}
+
 .speakerImgLiu {
   composes: speakerImg;
   background: url('./data/speaker-profile/Liu.jpg') no-repeat center center;
@@ -581,6 +585,16 @@ li {
 .speakerImgLinYJ {
   composes: speakerImg;
   background: url('./data/speaker-profile/LinYJ.jpg') no-repeat center center;
+}
+
+.speakerImgWuJY {
+  composes: speakerImg;
+  background: url('./data/speaker-profile/WuJY.jpg') no-repeat center center;
+}
+
+.speakerImgLinJ {
+  composes: speakerImg;
+  background: url('./data/speaker-profile/LinJ.jpg') no-repeat center center;
 }
 
 .speakerImgMiao {
@@ -670,8 +684,8 @@ li {
 }
 
 .speakerAvatar {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   background-size: cover;
   filter: grayscale(100%);
