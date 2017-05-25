@@ -18,7 +18,7 @@ module.exports = {
 				test: /\.css$/, loader: 'style!css?modules'
 			},
 			{
-				test: /\.jpe?g$|\.gif$|\.ttf|\.png$|\.svg$/i,
+				test: /\.jpe?g$|\.gif$|\.pdf$|\.docx|\.ttf|\.png$|\.svg$/i,
         loader: 'url-loader',
         query: { limit: 20000 }
 			}

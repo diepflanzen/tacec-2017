@@ -793,6 +793,7 @@ li {
 }
 
 .scheduleItemActivity {
+  composes: OTDProgramDesc;
   padding-top: 14px;
   margin-left: 50px;
 }

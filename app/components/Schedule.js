@@ -9,6 +9,7 @@ import Col from 'muicss/lib/react/col';
 import { Link } from 'react-router';
 import styles from '../styles.css';
 import programImg from '../images/03_Program2_03.png';
+import schedule from '../images/schedule.docx';
 
 import { toAbsPath } from '../utils'
 
@@ -251,8 +252,12 @@ export default class Schedule extends React.Component {
               </div>
             </div>*/}
 	          <Col md="10" md-offset="1">
-              <div style={{height: 800}}>
-	          <p className={styles.bodyTextAbout}>
+              <div style={{height: 850}}>
+                 <p className={styles.bodyTextAbout}>
+                   For the most updated schedule please <a href={schedule} target="_blank"> click here </a>
+                 </p>
+                 <h3 className={styles.contactHeading}>{lang === 'en' ? 'Schedule' : '節目表' }</h3>
+	               <p className={styles.bodyTextAbout}>
                   {tab === 0 ? July1Schedule : (tab === 1 ? July2Schedule : (tab === 2 ? July3Schedule : July4Schedule))}
                 </p>
               </div>
