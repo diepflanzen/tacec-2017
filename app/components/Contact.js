@@ -18,6 +18,8 @@ import ContactData from '../data/ContactData'
 export default class Contact extends React.Component {
   render() {
     const lang = this.props.lang || "en";
+    const viewPortWidth = window.innerWidth;
+    const isMobile = viewPortWidth < 600;
     return (
       <div>
         <div className={styles.aboutImgContainer}><img src={contactImg} alt="Contact icon image" className={styles.aboutImg}/></div>
@@ -46,11 +48,29 @@ export default class Contact extends React.Component {
                   </Col>
                 </p>)}
             </div>)}
-              {/*<div>
+	          </Col>
+          </Row>
+          <Row>
+            <Col md="10" md-offset="1">
+              <div className={styles.staffCard} style={{marginTop: 90}}>
+                <h3 className={styles.contactHeading}>{lang === 'en' ? 'Check-In Location' : '集合地點' }</h3>
+                <p className={styles.bodyTextAbout} style={{marginLeft: '2%', fontSize: 30, marginBottom: 0}}>
+                  West Chester University Brandywine Hall
+                </p>
+                <p className={styles.bodyTextAbout} style={{marginLeft: '2%', fontSize: 16, opacity: 0.7}}>
+                  Brandywine Hall, S New St, West Chester, PA 19383
+                </p>
+                <img src={trafficInfo} width="100%" />
+              </div>
+            </Col>
+          </Row>
+          <Row>
+            <Col md="10" md-offset="1">
+              <div className={styles.staffCard}>
                 <h3 className={styles.contactHeading}> LOCAL TAXI </h3>
                 <p className={styles.bodyTextAbout}>
                   <Col md="4">
-                    <span> Rainbow Cab Services  </span>
+                    <div className={styles.OTDProgramDesc}> Rainbow Cab Services  </div>
                   </Col>
                   <Col md="4" md-offset="4">
                     <img src={phoneIcon} width={25} />
@@ -59,17 +79,21 @@ export default class Contact extends React.Component {
                     </span>
                   </Col>
                 </p>
+              </div>
+              <div className={styles.staffCard} style={isMobile ? {height: 180} : {height: 140}}>
                 <h3 className={styles.contactHeading}> AIRPORT </h3>
                 <p className={styles.bodyTextAbout}>
                   <Col md="12">
-                    <span> Philadelphia International Airport  </span>
+                    <div className={styles.OTDProgramDesc}> Philadelphia International Airport  </div>
+                    <p> Take Uber or local taxi to the check-in location </p>
                   </Col>
-                  <p> Take Uber or local taxi to the check-in location </p>
                 </p>
+              </div>
+              <div className={styles.staffCard} style={isMobile ? {height: 250} : {height: 180}}>
                 <h3 className={styles.contactHeading}> PARKING </h3>
                 <p className={styles.bodyTextAbout}>
                   <Col md="8">
-                    <span> D Lot / M Lot  </span>
+                    <div className={styles.OTDProgramDesc}> D Lot / M Lot  </div>
                     <p> Suggestion: park at D lot (no overnight parking) first, check-in <br />
                     and take luggages to room, and then move your car to M lot </p>
                   </Col>
@@ -80,14 +104,6 @@ export default class Contact extends React.Component {
                     </span>
                   </Col>
                 </p>
-              </div>*/}
-	          </Col>
-          </Row>
-          <Row>
-            <Col md="10" md-offset="1">
-              <div className={styles.staffCard} style={{marginTop: 90}}>
-                <h3 className={styles.contactHeading}>{lang === 'en' ? 'Transportation' : '交通資訊' }</h3>
-                <img src={trafficInfo} width="100%" />
               </div>
             </Col>
           </Row>
