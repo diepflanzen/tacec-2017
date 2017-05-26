@@ -554,7 +554,8 @@ li {
 }
 
 .speakerDetail {
-  margin-left: 80px;
+  margin-left: 140px;
+  width: 470px;
 }
 
 .speakerImgLiu {
@@ -630,7 +631,7 @@ li {
 
 .speakerTitle {
   composes: heading;
-  font-size: 20px;
+  font-size: 25px;
   line-height: 30px;
   text-align: left;
   margin: 0;
@@ -639,9 +640,10 @@ li {
 
 .speakerSubtitle {
   composes: speakerTitle;
+  color: #64a680;
   font-size: 16px;
   line-height: 26px;
-  color: #444;
+  margin-bottom: 28px;
 }
 
 .footer {
@@ -684,8 +686,8 @@ li {
 }
 
 .speakerAvatar {
-  width: 200px;
-  height: 200px;
+  width: 275px;
+  height: 275px;
   border-radius: 50%;
   background-size: cover;
   filter: grayscale(100%);
@@ -694,6 +696,7 @@ li {
 
 .iceDivider {
   border-bottom: 1px solid rgba(0,0,0,.12);
+  margin-bottom: 10px;
 }
 
 .staffCard {
@@ -910,4 +913,16 @@ li {
   height: 100%;
   padding: 20px;
   padding-top: 40px;
+}
+
+@media (max-width: 600px) {
+
+  .speakerDetail {
+    margin-left: 20px;
+  }
+
+  .speakerDetail {
+    margin-left: 20px;
+    width: 380px;
+  }
 }

@@ -17,10 +17,10 @@ export default class Speaker extends React.Component {
     const speakerBlock = (speaker,i) => (
       <div key={i}>
           <Row className={styles.speakerBio}>
-            <Col lg="2" lg-offset="2" md="2" md-offset="5" xs="6" xs-offset="3">
+            <Col lg="2" lg-offset="2" md="2" md-offset="5" xs="6" xs-offset="2">
               <div className={styles[`speakerImg${speaker.uid}`] + ' ' + styles.speakerAvatar} />
             </Col>
-            <Col lg="6" lg-offset="0" md="8" md-offset="2" xs="12" className={styles.speakerDetail}>
+            <Col lg="6" lg-offset="0" md="6" md-offset="2" xs="12" className={styles.speakerDetail}>
               <h3 className={styles.speakerTitle}>{speaker.name[lang]}</h3>
               <h4 className={styles.speakerSubtitle}>{speaker.affiliation[lang]}</h4>
               {speaker.intro[lang].map((str,i) =>
@@ -41,7 +41,7 @@ export default class Speaker extends React.Component {
         <div className={styles.aboutImgContainer}><img src={speakerImg} alt="Speaker icon image" className={styles.aboutImg}/></div>
         <Container className={styles.landingBody}>
 	        <Row>
-	          <Col md="10" md-offset="1">
+	          <Col md="12">
               {speakerData.speakers.map((speaker,i) => speakerBlock(speaker,i))}
 	          </Col>
           </Row>
