@@ -925,4 +925,8 @@ li {
     margin-left: 20px;
     width: 380px;
   }
+
+  .scheduleItem {
+    height: 80px;
+  }
 }

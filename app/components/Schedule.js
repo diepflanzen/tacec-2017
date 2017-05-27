@@ -17,7 +17,7 @@ export default class Schedule extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      tab: 0
+      tab: 1
     };
   }
 
@@ -29,14 +29,17 @@ export default class Schedule extends React.Component {
     const langPath = this.props.lang;
     const lang = langPath || "en";
     const { tab } = this.state;
+    const viewPortWidth = window.innerWidth;
+    const isMobile = viewPortWidth < 600;
 
     const getDate = (dateString) => dateString.split('T')[0].split('-')[2];
+    const trimStringForMobile = (string, trimLength) => (isMobile && string.length > trimLength) ? string.substr(0, trimLength) + '...' : string;
 
-    const July1ScheduleContent = programData.filter(data => getDate(data.Date) === '01' && data.Topic).map(program =>
+    const July1ScheduleContent = programData.filter(data => getDate(data.Date) === '01' && data.Topic).map((program, index) =>
       (
-      <div className={styles.scheduleItem}>
+      <div className={styles.scheduleItem} key={index}>
         <div className={styles.scheduleItemTime}>{program.Time}</div>
-        <div className={styles.scheduleItemActivity}>{`${program['Speaker 1'] && '「'}${program.Topic}${program['Speaker 1'] && '」'} ${program['Speaker 1'] || ''} ${program['Speaker 2'] || ''} ${program['Speaker 3'] || ''} ${program['Speaker 4'] || ''}`}</div>
+        <div className={styles.scheduleItemActivity}>{trimStringForMobile(`${program['Speaker 1'] && '「'}${program.Topic}${program['Speaker 1'] && '」'} ${program['Speaker 1'] || ''} ${program['Speaker 2'] || ''} ${program['Speaker 3'] || ''} ${program['Speaker 4'] || ''}`, 35)}</div>
       </div>
       )
     );
@@ -47,11 +50,11 @@ export default class Schedule extends React.Component {
       </div>
     );
 
-    const July2ScheduleContent = programData.filter(data => getDate(data.Date) === '02' && data.Topic).map(program =>
+    const July2ScheduleContent = programData.filter(data => getDate(data.Date) === '02' && data.Topic).map((program, index) =>
       (
-      <div className={styles.scheduleItem}>
+      <div className={styles.scheduleItem} key={index}>
         <div className={styles.scheduleItemTime}>{program.Time}</div>
-        <div className={styles.scheduleItemActivity}>{`${program['Speaker 1'] && '「'}${program.Topic}${program['Speaker 1'] && '」'} ${program['Speaker 1'] || ''} ${program['Speaker 2'] || ''} ${program['Speaker 3'] || ''} ${program['Speaker 4'] || ''}`}</div>
+        <div className={styles.scheduleItemActivity}>{trimStringForMobile(`${program['Speaker 1'] && '「'}${program.Topic}${program['Speaker 1'] && '」'} ${program['Speaker 1'] || ''} ${program['Speaker 2'] || ''} ${program['Speaker 3'] || ''} ${program['Speaker 4'] || ''}`, 35)}</div>
       </div>
       )
     );
@@ -62,11 +65,11 @@ export default class Schedule extends React.Component {
       </div>
     );
 
-    const July3ScheduleContent = programData.filter(data => getDate(data.Date) === '03' && data.Topic).map(program =>
+    const July3ScheduleContent = programData.filter(data => getDate(data.Date) === '03' && data.Topic).map((program, index) =>
       (
-      <div className={styles.scheduleItem}>
+      <div className={styles.scheduleItem} key={index}>
         <div className={styles.scheduleItemTime}>{program.Time}</div>
-        <div className={styles.scheduleItemActivity}>{`${program['Speaker 1'] && '「'}${program.Topic}${program['Speaker 1'] && '」'} ${program['Speaker 1'] || ''} ${program['Speaker 2'] || ''} ${program['Speaker 3'] || ''} ${program['Speaker 4'] || ''}`}</div>
+        <div className={styles.scheduleItemActivity}>{trimStringForMobile(`${program['Speaker 1'] && '「'}${program.Topic}${program['Speaker 1'] && '」'} ${program['Speaker 1'] || ''} ${program['Speaker 2'] || ''} ${program['Speaker 3'] || ''} ${program['Speaker 4'] || ''}`, 35)}</div>
       </div>
       )
     );
@@ -77,11 +80,11 @@ export default class Schedule extends React.Component {
       </div>
     );
 
-    const July4ScheduleContent = programData.filter(data => getDate(data.Date) === '04' && data.Topic).map(program =>
+    const July4ScheduleContent = programData.filter(data => getDate(data.Date) === '04' && data.Topic).map((program, index) =>
       (
-      <div className={styles.scheduleItem}>
+      <div className={styles.scheduleItem} key={index}>
         <div className={styles.scheduleItemTime}>{program.Time}</div>
-        <div className={styles.scheduleItemActivity}>{`${program['Speaker 1'] && '「'}${program.Topic}${program['Speaker 1'] && '」'} ${program['Speaker 1'] || ''} ${program['Speaker 2'] || ''} ${program['Speaker 3'] || ''} ${program['Speaker 4'] || ''}`}</div>
+        <div className={styles.scheduleItemActivity}>{trimStringForMobile(`${program['Speaker 1'] && '「'}${program.Topic}${program['Speaker 1'] && '」'} ${program['Speaker 1'] || ''} ${program['Speaker 2'] || ''} ${program['Speaker 3'] || ''} ${program['Speaker 4'] || ''}`, 35)}</div>
       </div>
       )
     );
