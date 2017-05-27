@@ -640,7 +640,7 @@ li {
 
 .speakerSubtitle {
   composes: speakerTitle;
-  color: #64a680;
+  color: #9bd07c;
   font-size: 16px;
   line-height: 26px;
   margin-bottom: 28px;
