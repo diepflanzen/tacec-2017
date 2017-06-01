@@ -6,6 +6,7 @@ import About from './components/About';
 import Schedule from './components/Schedule';
 import Speaker from './components/Speaker';
 import Contact from './components/Contact';
+import Register from './components/Register';
 import OTDProgram from './components/OTDProgram';
 import { Router, Route, IndexRoute, hashHistory, applyRouterMiddleware } from 'react-router';
 import { useScroll } from 'react-router-scroll';
@@ -21,6 +22,7 @@ const components = Object.freeze({
     {path: "speaker",  component: Speaker},
     {path: "contact",  component: Contact},
     {path: "otd",      component: OTDProgram},
+    {path: "register",      component: Register},
   ]
 });
 

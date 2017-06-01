@@ -226,6 +226,7 @@ li {
   margin-bottom: 50px;
   line-height: 36px;
   letter-spacing: 1px;
+  text-align: center;
 }
 
 .contactHeading {
@@ -351,6 +352,15 @@ li {
 }
 
 /* End OTD Program */
+
+/* Registration Page */
+
+.registerSubheading {
+  color: #64a680;
+  font-size: 18px;
+  margin-top: 50px;
+  margin-bottom: 35px;
+}
 
 /* Home Page Host Box */
 .homepageBox {
