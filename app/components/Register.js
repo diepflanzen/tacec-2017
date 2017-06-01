@@ -70,15 +70,15 @@ export default class About extends React.PureComponent {
                 <ul style={{listStyle: 'none'}}>
                   <li style={{marginTop: 14}}>
                     <div style={{display: 'flex', color: '#64a680', marginTop: 40}}>
-                      <div style={{paddingTop: 10, paddingLeft: 10, fontWeight: 'bolder'}}>Regular</div>
-                      <div style={{fontSize: 33, paddingTop: 0}}>$325</div>
+                      <div style={{paddingTop: 10, paddingLeft: 10, fontWeight: 'bolder', marginRight: 5}}>Regular</div>
+                      <div style={{fontSize: 33, paddingTop: 0, marginRight: 5}}>$325</div>
                       <div style={{fontSize: 12, paddingTop: 25, color: '#777'}}>(older than 40)</div>
                     </div>
                   </li>
                   <li style={{marginTop: 14}}>
                     <div style={{display: 'flex', color: '#64a680', marginTop: 40}}>
-                      <div style={{paddingTop: 10, paddingLeft: 10, fontWeight: 'bolder'}}>Junior</div>
-                      <div style={{fontSize: 33, paddingTop: 0}}>$240</div>
+                      <div style={{paddingTop: 10, paddingLeft: 10, fontWeight: 'bolder', marginRight: 5}}>Junior</div>
+                      <div style={{fontSize: 33, paddingTop: 0, marginRight: 5}}>$240</div>
                       <div style={{fontSize: 12, paddingTop: 25, color: '#777'}}>(younger than 40)</div>
                     </div>
                   </li>
@@ -100,15 +100,15 @@ export default class About extends React.PureComponent {
                 <ul style={{listStyle: 'none'}}>
                   <li style={{marginTop: 14}}>
                     <div style={{display: 'flex', color: '#64a680', marginTop: 40}}>
-                      <div style={{paddingTop: 10, paddingLeft: 10, fontWeight: 'bolder'}}>Regular</div>
-                      <div style={{fontSize: 33, paddingTop: 0}}>$240</div>
+                      <div style={{paddingTop: 10, paddingLeft: 10, fontWeight: 'bolder', marginRight: 5}}>Regular</div>
+                      <div style={{fontSize: 33, paddingTop: 0, marginRight: 5}}>$240</div>
                       <div style={{fontSize: 12, paddingTop: 25, color: '#777'}}>(TANG parents, Young Adults - out of university)</div>
                     </div>
                   </li>
                   <li style={{marginTop: 14}}>
                     <div style={{display: 'flex', color: '#64a680', marginTop: 40}}>
-                      <div style={{paddingTop: 10, paddingLeft: 10, fontWeight: 'bolder'}}>Junior</div>
-                      <div style={{fontSize: 33, paddingTop: 0}}>$190</div>
+                      <div style={{paddingTop: 10, paddingLeft: 10, fontWeight: 'bolder', marginRight: 5}}>Junior</div>
+                      <div style={{fontSize: 33, paddingTop: 0, marginRight: 5}}>$190</div>
                       <div style={{fontSize: 12, paddingTop: 25, color: '#777'}}>(Young Adults with Univ ID, High school, juniors, tiny tots)</div>
                     </div>
                   </li>
@@ -131,8 +131,8 @@ export default class About extends React.PureComponent {
                 <ul style={{listStyle: 'none'}}>
                   <li style={{marginTop: 14}}>
                     <div style={{display: 'flex', color: '#64a680', marginTop: 40}}>
-                      <div style={{paddingTop: 10, paddingLeft: 10, fontWeight: 'bolder'}}>Regular</div>
-                      <div style={{fontSize: 33, paddingTop: 0}}>$190</div>
+                      <div style={{paddingTop: 10, paddingLeft: 10, fontWeight: 'bolder', marginRight: 5}}>Regular</div>
+                      <div style={{fontSize: 33, paddingTop: 0, marginRight: 5}}>$190</div>
                       <div style={{fontSize: 12, paddingTop: 25, color: '#777'}}>(only available to OTD attendees)</div>
                     </div>
                   </li>

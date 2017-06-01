@@ -146,10 +146,9 @@ export default class Schedule extends React.Component {
           </Row>
         </Container>
         <div style={{height: 150, width: '100%', backgroundColor: '#64a680'}}>
-          <a href="https://tang.regfox.com/tacec-tang-conference-wotd-2017"
-            target="_blank">
+          <Link to="register">
             <Button color="primary" className={styles.applyNowButton}>Register Now</Button>
-          </a>
+          </Link>
         </div>
       </div>
     );

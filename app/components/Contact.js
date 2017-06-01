@@ -6,7 +6,7 @@ import Container from 'muicss/lib/react/container';
 import Divider from 'muicss/lib/react/divider';
 import Row from 'muicss/lib/react/row';
 import Col from 'muicss/lib/react/col';
-
+import { Link } from 'react-router';
 import styles from '../styles.css';
 import contactImg from '../images/06_Contact_03.jpg';
 import emailIcon from '../images/06_Contact_07-09.png';
@@ -109,10 +109,9 @@ export default class Contact extends React.Component {
           </Row>
         </Container>
         <div style={{height: 150, width: '100%', backgroundColor: '#64a680'}}>
-          <a href="https://tang.regfox.com/tacec-tang-conference-wotd-2017"
-            target="_blank">
+          <Link to="register">
             <Button color="primary" className={styles.applyNowButton}>Register Now</Button>
-          </a>
+          </Link>
         </div>
       </div>
     );
