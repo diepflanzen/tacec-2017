@@ -230,8 +230,8 @@ const OTDProgramData = Object.freeze({
               },
               time: '15:00 - 15:50',
               speakers: {
-                en: 'Speakers TBD',
-                zh: '講者確定中',
+                en: 'Russell Hisao | Hsi-Ming Lin',
+                zh: 'Russell Hsiao | 林希明',
               },
               description: {
                 en: 'In D.C., the political forces are separated into three areas: the Congress, the state department, and the think tanks. The civil society can usually influence policy making through the routes of revealing information to the think tanks and creating policy suggestions. This panel will invite experts from the think tanks and the state department to discuss how NGOs and private citizens can sway the policy-making direction about Taiwan in the US and international society.',
@@ -287,8 +287,8 @@ const OTDProgramData = Object.freeze({
               },
               time: '15:00 - 15:50',
               speakers: {
-                en: 'Chia-Chun Jennie Chung | Annabelle Hsin-Hui Hsu | Jian-geng Chiou',
-                zh: '鍾佳君 | 徐歆惠 | 邱澗庚',
+                en: 'Chia-Chun Jennie Chung | Annabelle Hsin-Hui Hsu | Jian-geng Chiou | Ning Chiang',
+                zh: '鍾佳君 | 徐歆惠 | 邱澗庚 | 姜寧',
               },
               description: {
                 en: 'The persistence in building local organizations, issue awareness, and social networks is the necessary ground work of political activism. However, activist organizations often face issues of lacking idea inspiration or lacking resources to continue the operation. This panel aims to create a platform for local organizers to share ideas of creating sustainable organizations and large-scale solidarity action building for future activities. ',
