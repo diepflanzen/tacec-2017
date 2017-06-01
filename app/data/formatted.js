@@ -1,4 +1,3 @@
-const TACECData = Object.freeze(
 {
    "1": {
       "ID": 1,
@@ -2115,8 +2114,3 @@ const TACECData = Object.freeze(
       "Abstract": ""
    }
 }
-);
-
-const TACECDataArray = Object.keys(TACECData).map(key => TACECData[key]);
-
-export default TACECDataArray;
