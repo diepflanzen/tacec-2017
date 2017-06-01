@@ -32,7 +32,7 @@ export default class Schedule extends React.Component {
     const viewPortWidth = window.innerWidth;
     const isMobile = viewPortWidth < 600;
 
-    const getDate = (dateString) => dateString.split('T')[0].split('-')[2];
+    const getDate = (dateString) => dateString ? dateString.split('T')[0].split('-')[2] : '';
     const trimStringForMobile = (string, trimLength) => (isMobile && string.length > trimLength) ? string.substr(0, trimLength) + '...' : string;
 
     const July1ScheduleContent = programData.filter(data => getDate(data.Date) === '01' && data.Topic).map((program, index) =>
