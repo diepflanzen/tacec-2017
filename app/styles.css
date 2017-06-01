@@ -546,9 +546,81 @@ li {
   margin-bottom: 30px;
 }
 
+/* Speaker Img */
+
 .speakerImg {
   height: 300px;
   background-color: #444;
+}
+
+.speakerDetail {
+  margin-left: 140px;
+  width: 470px;
+}
+
+.speakerImgLiu {
+  composes: speakerImg;
+  background: url('./data/speaker-profile/Liu.jpg') no-repeat center center;
+}
+
+.speakerImgWu {
+  composes: speakerImg;
+  background: url('./data/speaker-profile/Wu.jpg') no-repeat center center;
+}
+
+.speakerImgHsu {
+  composes: speakerImg;
+  background: url('./data/speaker-profile/Hsu.jpg') no-repeat center center;
+}
+
+.speakerImgDu {
+  composes: speakerImg;
+  background: url('./data/speaker-profile/Du.jpg') no-repeat center center;
+}
+
+.speakerImgLinMY {
+  composes: speakerImg;
+  background: url('./data/speaker-profile/LinMY.jpg') no-repeat center center;
+}
+
+.speakerImgLinYJ {
+  composes: speakerImg;
+  background: url('./data/speaker-profile/LinYJ.jpg') no-repeat center center;
+}
+
+.speakerImgWuJY {
+  composes: speakerImg;
+  background: url('./data/speaker-profile/WuJY.jpg') no-repeat center center;
+}
+
+.speakerImgLinJ {
+  composes: speakerImg;
+  background: url('./data/speaker-profile/LinJ.jpg') no-repeat center center;
+}
+
+.speakerImgMiao {
+  composes: speakerImg;
+  background: url('./data/speaker-profile/Miao.jpg') no-repeat center center;
+}
+
+.speakerImgHsiao {
+  composes: speakerImg;
+  background: url('./data/speaker-profile/Hsiao.jpg') no-repeat center center;
+}
+
+.speakerImgChiu {
+  composes: speakerImg;
+  background: url('./data/speaker-profile/Chiu.jpg') no-repeat center center;
+}
+
+.speakerImgChong {
+  composes: speakerImg;
+  background: url('./data/speaker-profile/Chong.jpg') no-repeat center center;
+}
+
+.speakerImgChen {
+  composes: speakerImg;
+  background: url('./data/speaker-profile/Chen.jpg') no-repeat center center;
 }
 
 .speakerInfo {
@@ -559,7 +631,7 @@ li {
 
 .speakerTitle {
   composes: heading;
-  font-size: 20px;
+  font-size: 25px;
   line-height: 30px;
   text-align: left;
   margin: 0;
@@ -568,9 +640,10 @@ li {
 
 .speakerSubtitle {
   composes: speakerTitle;
+  color: #9bd07c;
   font-size: 16px;
   line-height: 26px;
-  color: #444;
+  margin-bottom: 28px;
 }
 
 .footer {
@@ -613,8 +686,8 @@ li {
 }
 
 .speakerAvatar {
-  width: 150px;
-  height: 150px;
+  width: 275px;
+  height: 275px;
   border-radius: 50%;
   background-size: cover;
   filter: grayscale(100%);
@@ -623,11 +696,16 @@ li {
 
 .iceDivider {
   border-bottom: 1px solid rgba(0,0,0,.12);
+  margin-bottom: 10px;
 }
 
 .staffCard {
   padding-bottom: 23px;
-  border-bottom: 1px solid rgba(0,0,0,.12)
+  border-bottom: 1px solid rgba(0,0,0,.12);
+}
+
+.staffCardBodyText {
+  text-align: left;
 }
 
 .staffCardHeading {
@@ -706,7 +784,7 @@ li {
 .scheduleItem {
   composes: staffCard;
   display: flex;
-  height: 50px;
+  height: 60px;
   font-size: 16px;
   padding-left: 23px;
   color: #444;
@@ -722,6 +800,7 @@ li {
 }
 
 .scheduleItemActivity {
+  composes: OTDProgramDesc;
   padding-top: 14px;
   margin-left: 50px;
 }
@@ -834,4 +913,20 @@ li {
   height: 100%;
   padding: 20px;
   padding-top: 40px;
+}
+
+@media (max-width: 600px) {
+
+  .speakerDetail {
+    margin-left: 20px;
+  }
+
+  .speakerDetail {
+    margin-left: 20px;
+    width: 380px;
+  }
+
+  .scheduleItem {
+    height: 80px;
+  }
 }

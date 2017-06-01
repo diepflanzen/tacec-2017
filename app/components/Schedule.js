@@ -9,14 +9,15 @@ import Col from 'muicss/lib/react/col';
 import { Link } from 'react-router';
 import styles from '../styles.css';
 import programImg from '../images/03_Program2_03.png';
-
+import schedule from '../images/schedule.docx';
+import programData from '../data/programdata';
 import { toAbsPath } from '../utils'
 
 export default class Schedule extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      tab: 0
+      tab: 1
     };
   }
 
@@ -28,188 +29,69 @@ export default class Schedule extends React.Component {
     const langPath = this.props.lang;
     const lang = langPath || "en";
     const { tab } = this.state;
+    const viewPortWidth = window.innerWidth;
+    const isMobile = viewPortWidth < 600;
 
-    const July1Schedule = (
-      <div className={styles.scheduleBox}>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>Before 15:00</div>
-          <div className={styles.scheduleItemActivity}>Tour </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>15:00 - 22:00</div>
-          <div className={styles.scheduleItemActivity}>Registration </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>17:00 - 19:00</div>
-          <div className={styles.scheduleItemActivity}>Dinner </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>19:30 - 23:00</div>
-          <div className={styles.scheduleItemActivity}>Reception </div>
-        </div>
+    const getDate = (dateString) => dateString.split('T')[0].split('-')[2];
+    const trimStringForMobile = (string, trimLength) => (isMobile && string.length > trimLength) ? string.substr(0, trimLength) + '...' : string;
+
+    const July1ScheduleContent = programData.filter(data => getDate(data.Date) === '01' && data.Topic).map((program, index) =>
+      (
+      <div className={styles.scheduleItem} key={index}>
+        <div className={styles.scheduleItemTime}>{program.Time}</div>
+        <div className={styles.scheduleItemActivity}>{trimStringForMobile(`${program['Speaker 1'] && '「'}${program.Topic}${program['Speaker 1'] && '」'} ${program['Speaker 1'] || ''} ${program['Speaker 2'] || ''} ${program['Speaker 3'] || ''} ${program['Speaker 4'] || ''}`, 35)}</div>
       </div>
+      )
+    );
+    const July1Schedule =
+    (
+      <div className={styles.scheduleBox}>
+        {July1ScheduleContent}
+      </div>
+    );
+
+    const July2ScheduleContent = programData.filter(data => getDate(data.Date) === '02' && data.Topic).map((program, index) =>
+      (
+      <div className={styles.scheduleItem} key={index}>
+        <div className={styles.scheduleItemTime}>{program.Time}</div>
+        <div className={styles.scheduleItemActivity}>{trimStringForMobile(`${program['Speaker 1'] && '「'}${program.Topic}${program['Speaker 1'] && '」'} ${program['Speaker 1'] || ''} ${program['Speaker 2'] || ''} ${program['Speaker 3'] || ''} ${program['Speaker 4'] || ''}`, 35)}</div>
+      </div>
+      )
     );
 
     const July2Schedule = (
       <div className={styles.scheduleBox}>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>06:15 - 07:30</div>
-          <div className={styles.scheduleItemActivity}>Morning Activity </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>07:00 - 09:00</div>
-          <div className={styles.scheduleItemActivity}>Breakfast </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>07:30 - 08:30</div>
-          <div className={styles.scheduleItemActivity}>主日禮拜 </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>08:30 - 09:00</div>
-          <div className={styles.scheduleItemActivity}>Openning </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>09:00 - 09:45 </div>
-          <div className={styles.scheduleItemActivity}>Keynote 1 </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>09:45 - 10:30</div>
-          <div className={styles.scheduleItemActivity}>Keynote 2 </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>10:30 - 11:15</div>
-          <div className={styles.scheduleItemActivity}>Keynote 3 </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>11:15 - 12:00</div>
-          <div className={styles.scheduleItemActivity}>Keynote 4 </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>12:00 - 14:00</div>
-          <div className={styles.scheduleItemActivity}>Lunch </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>14:00 - 14:50</div>
-          <div className={styles.scheduleItemActivity}>Panel Session 1 </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>15:00 - 15:50</div>
-          <div className={styles.scheduleItemActivity}>Panel Session 2 </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>16:00 - 16:50</div>
-          <div className={styles.scheduleItemActivity}>Panel Session 3 </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>17:00 - 19:00</div>
-          <div className={styles.scheduleItemActivity}>Dinner </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>19:00 - 24:00 </div>
-          <div className={styles.scheduleItemActivity}>OTD Hackathon </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>19:30 - 21:30</div>
-          <div className={styles.scheduleItemActivity}>王康陸博士紀念音樂會 </div>
-        </div>
+        {July2ScheduleContent}
       </div>
+    );
+
+    const July3ScheduleContent = programData.filter(data => getDate(data.Date) === '03' && data.Topic).map((program, index) =>
+      (
+      <div className={styles.scheduleItem} key={index}>
+        <div className={styles.scheduleItemTime}>{program.Time}</div>
+        <div className={styles.scheduleItemActivity}>{trimStringForMobile(`${program['Speaker 1'] && '「'}${program.Topic}${program['Speaker 1'] && '」'} ${program['Speaker 1'] || ''} ${program['Speaker 2'] || ''} ${program['Speaker 3'] || ''} ${program['Speaker 4'] || ''}`, 35)}</div>
+      </div>
+      )
     );
 
     const July3Schedule = (
       <div className={styles.scheduleBox}>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>06:15 - 07:30</div>
-          <div className={styles.scheduleItemActivity}>Morning Activity </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>07:00 - 09:00</div>
-          <div className={styles.scheduleItemActivity}>Breakfast </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>07:30 - 08:30</div>
-          <div className={styles.scheduleItemActivity}>主日禮拜 </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>09:00 - 09:45 </div>
-          <div className={styles.scheduleItemActivity}>Keynote 5 </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>09:45 - 10:30</div>
-          <div className={styles.scheduleItemActivity}>Keynote 6 </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>10:30 - 11:15</div>
-          <div className={styles.scheduleItemActivity}>Keynote 7 </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>11:15 - 12:00</div>
-          <div className={styles.scheduleItemActivity}>Keynote 8 </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>12:00 - 14:00</div>
-          <div className={styles.scheduleItemActivity}>Lunch </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>14:00 - 14:50</div>
-          <div className={styles.scheduleItemActivity}>Panel Session 4 </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>15:00 - 15:50</div>
-          <div className={styles.scheduleItemActivity}>Panel Session 5 </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>16:00 - 16:50</div>
-          <div className={styles.scheduleItemActivity}>Panel Session 6 </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>17:00 - 19:00</div>
-          <div className={styles.scheduleItemActivity}>Dinner </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>19:30 - 21:30</div>
-          <div className={styles.scheduleItemActivity}>台灣之夜（表演活動） </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>21:30 - 23:00 </div>
-          <div className={styles.scheduleItemActivity}>台灣夜市 </div>
-        </div>
+        {July3ScheduleContent}
       </div>
+    );
+
+    const July4ScheduleContent = programData.filter(data => getDate(data.Date) === '04' && data.Topic).map((program, index) =>
+      (
+      <div className={styles.scheduleItem} key={index}>
+        <div className={styles.scheduleItemTime}>{program.Time}</div>
+        <div className={styles.scheduleItemActivity}>{trimStringForMobile(`${program['Speaker 1'] && '「'}${program.Topic}${program['Speaker 1'] && '」'} ${program['Speaker 1'] || ''} ${program['Speaker 2'] || ''} ${program['Speaker 3'] || ''} ${program['Speaker 4'] || ''}`, 35)}</div>
+      </div>
+      )
     );
 
     const July4Schedule = (
       <div className={styles.scheduleBox}>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>06:15 - 07:30</div>
-          <div className={styles.scheduleItemActivity}>Morning Activity </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>07:00 - 09:00</div>
-          <div className={styles.scheduleItemActivity}>Breakfast </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>07:30 - 08:30</div>
-          <div className={styles.scheduleItemActivity}>主日禮拜 </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>09:00 - 09:45 </div>
-          <div className={styles.scheduleItemActivity}>Keynote 9 </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>09:45 - 10:30</div>
-          <div className={styles.scheduleItemActivity}>Keynote 10 </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>10:30 - 11:15</div>
-          <div className={styles.scheduleItemActivity}>Keynote 11 </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>11:15 - 12:00</div>
-          <div className={styles.scheduleItemActivity}>Keynote 12 </div>
-        </div>
-        <div className={styles.scheduleItem}>
-          <div className={styles.scheduleItemTime}>12:00 - 14:00</div>
-          <div className={styles.scheduleItemActivity}>Closing, Lunch & Checkout </div>
-        </div>
+        {July4ScheduleContent}
       </div>
     )
     return (
@@ -251,8 +133,12 @@ export default class Schedule extends React.Component {
               </div>
             </div>*/}
 	          <Col md="10" md-offset="1">
-              <div style={{height: 800}}>
-	          <p className={styles.bodyTextAbout}>
+              <div style={{height: 850, overflow: 'scroll'}}>
+                 <p className={styles.bodyTextAbout}>
+                   For the most updated schedule please <a href={schedule} target="_blank"> click here </a>
+                 </p>
+                 <h3 className={styles.contactHeading}>{lang === 'en' ? 'Schedule' : '節目表' }</h3>
+	               <p className={styles.bodyTextAbout}>
                   {tab === 0 ? July1Schedule : (tab === 1 ? July2Schedule : (tab === 2 ? July3Schedule : July4Schedule))}
                 </p>
               </div>

@@ -14,6 +14,7 @@ import heroImgSmall from '../images/hero_small.png';
 import logoMarker from '../images/map-07.png';
 import mapInfo from '../images/map_info.png';
 import dotImg from '../images/dot.png';
+import regForm from '../images/form.pdf';
 import GoogleMapReact from 'google-map-react';
 
 import { toAbsPath } from '../utils'
@@ -74,7 +75,7 @@ export default class Landing extends React.Component {
               </Col>
             </Row>
             <Row>
-              <a href="https://goo.gl/f0fsCf" target="_blank">
+              <a href={regForm} target="_blank">
                 <Button color="primary" className={styles.OTDButton} style={{fontSize: 15}}>{LandingData.downloadPaperForm[lang]}</Button>
               </a>
               <a href="https://tang.regfox.com/tacec-tang-conference-wotd-2017" target="_blank">
