@@ -121,10 +121,10 @@ const OTDProgramData = Object.freeze({
   },
   projectList: {
     buttonText: {
-      en: "Project Pool",
-      zh: "專案列表",
+      en: "Hackfoldr",
+      zh: "黑客松Hackfoldr",
     },
-    link: "https://g0vus.hackpad.com/2017-g0v--vkwG8i3qu5z",
+    link: "https://beta.hackfoldr.org/otd-hackathon",
   },
   grantPolicy: {
     buttonText: {
